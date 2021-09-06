@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <title>Резюме Богдана Царука</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- нерабочая ссылка -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- нерабочая ссылка -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
-    />
+    /> <!--
+      Ето очень хорошо что ты пытаешься изучать подключение шрифтов. Ето лучший способ подключения шрифтов
+      Но есть и другие способы. Вот очень хороший урок - https://www.youtube.com/watch?v=GwA0BN5RgB0
+      -->
   </head>
   <body>
     <!-- About my self -->
     <header>
       <div class="container">
         <!--2:15:54 about size of body tags FE (Snisar) Lesson 05-->
-        <span class="desk-left">
+        <span class="desk-left">  <!--Семантический неверная вложенность - Тут нужно было использовать блочный тег-->
           <h1>Царук Богдан Петрович</h1>
           <h2>Особісти данні:</h2>
           <ul>
@@ -36,13 +39,16 @@
                 href="https://www.facebook.com/bogdan.tsaruk"
                 alt="facebook page"
                 class="social"
-                >Facebook сторінка</a
+                >
+                <!-- Маленькая ошибка с alt - он есть у картинок. у астальных title-->
+                Facebook сторінка</a
               >
             </li>
           </ul>
         </span>
-        <span class="desk-right">
-          <p>
+        <span class="desk-right">  <!-- Семантический неправильная вложенность-->
+          <!-- http://htmlbook.ru/html/span -->
+          <p> <!-- http://htmlbook.ru/html/p -->
             <img src="img/1.jpg" alt="Фото Богдана Царука" />
           </p>
         </span>
