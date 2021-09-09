@@ -27,7 +27,7 @@ header {
 }
 
 header .header_logo>a{
-  font-size: 40px;
+  font-size: 35px;
   text-decoration: none;
   font-weight: bold;
   color: #173A56;
@@ -50,16 +50,16 @@ header nav a {
 
 header nav .header_btn {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 50px;
   font-size: 30px;
 }
 
 header nav .header_btn .header-sing-in,
 header nav .header_btn .header-sing-up {
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 10px 24px;
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight:600;
     background: transparent;
     border-radius: 5px;
     border: 1px solid var(--btn-default-color-border);
@@ -74,7 +74,7 @@ header nav .header_btn .active {
 
 /*main*/
 main{
-  margin-top: 39px;
+  margin-top: 56px;
 }
 
 main .home {
@@ -82,72 +82,154 @@ main .home {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-main .home svg {
-  width: 50%;
+main .home .home_right {
+  width: 40%;
 }
 
 main .home .home_left {
   text-align: left;
-  width: 50%;
+  width: 40%;
 }
 
-.title {
-  text-transform: capitalize;
+main .home .home_left .title {
   font-weight: 700;
   font-size: 44px;
-  line-height: 54px;
+  line-height: 64px;
   color: #2F281E;
-  margin: 70px 0 40px;
+  padding: 83px 0 40px;
 }
 
 main .home .home_left .description{
-  text-align: left;
+  text-align: start;
+  font-style: normal;
   font-size: 18px;
-  line-height: 2.8em;
-  margin: 25px 0 50px;
+  line-height: 1.9em;
+  padding: 0px 103px 0px 0px;
 
 }
 
 main .home .btn {
   display: inline-block;
-  margin-left: 0;
+  padding-top: 61px;
+  margin-left: 1px;
   font-size: 16px;
 }
 
 main .home .btn .get-started {
-  
   font-size: 16px;
   padding: 14px 41px;
   text-transform: capitalize;
   font-weight: bold;
   background: var(--btn-active-color-bg);
   color: var(--btn-active-color-text);
-  border: 1px solid var(--btn-default-color-border);
+  border: 0px solid var(--btn-default-color-border);
   border-radius: 5px;
 }
 
-main .home .home--left .btn .btn--watch_the_video {
-  margin: 0 20px 0;
-  display: inline-block;
-  position: relative;
+main .home .home_left .btn .btn--watch_the_video {
+  margin: 0 0px 0 2px;
+  color:  #ff9900;
+ 
+  
 }
 
-main .home .home--left .btn .btn--watch_the_video .arrow {
+main .home .home_left .btn .btn--arrow {
+  text-decoration: none;
+}
+
+main .home .home_left .btn .arrow {
+  
   display: inline-block;
+  margin-left: 29px;
   width: 0;
   height: 0;
-  font-size: 16px;
-  border-left: 16px solid var(--btn-active-color-bg);
-  border-right: 0 solid transparent;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
+  border-style: solid;
   border-radius: 2px;
-  position: absolute;
-  top: -2px;
-  left: 0;
+  border-width: 8.5px 0px 8.5px 15px;
+  border-color: transparent transparent transparent #ff9900;
+  position: relative;
+  top: 4px;
+
 }
+
+/*feature*/
+
+.feature .description{
+  padding: 0 0 0 0;
+}
+
+.feature .description h2 {
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 56px;
+  margin: 101px 0 54px 0;
+}
+
+.feature .description .figures figure{
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.feature .description .figures figure figcaption{
+  padding: 0 57px 0 0 ;
+}
+
+.feature .description .figures figure h4{
+  font-weight: 600;
+  padding: 0 0 13px 0;
+}
+
+.feature .description .figures figure p{
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.feature .description .figures figure svg{
+  padding: 0 0 40px 0;
+  vertical-align: top;
+}
+
+.feature .description .figures{
+background-image: url('../img/bg.svg');
+background-position: 0% 100%;
+background-repeat: no-repeat;
+position: relative;
+min-height: 389px;
+min-width: 100%;
+padding-left: 150px;
+}
+
+
+.feature .description .button{
+  margin: 34px 0 0 0;
+  padding-left: 456px;
+}
+
+.feature .description .sign_up_now {
+  font-size: 16px;
+  padding: 14px 41px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: var(--btn-active-color-bg);
+  color: var(--btn-active-color-text);
+  border: 0px solid var(--btn-default-color-border);
+  border-radius: 5px;
+}
+
+/* validation */
+
+
+
 
 /*
 .header_logo{
