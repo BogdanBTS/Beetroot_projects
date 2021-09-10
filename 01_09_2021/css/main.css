@@ -13,6 +13,7 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+
 header, main, footer {
   width: 100%;
   max-width: 1400px;
@@ -72,18 +73,19 @@ header nav .header_btn .active {
 
 
 
-/*main*/
+/*MAIN*/
 main{
   margin-top: 56px;
 }
 
 main .home {
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   padding-left: 10%;
-  padding-right: 10%;
+  padding-right: 11%;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 main .home .home_right {
@@ -92,7 +94,7 @@ main .home .home_right {
 
 main .home .home_left {
   text-align: left;
-  width: 40%;
+  width: 49%;
 }
 
 main .home .home_left .title {
@@ -114,9 +116,9 @@ main .home .home_left .description{
 
 main .home .btn {
   display: inline-block;
-  padding-top: 61px;
   margin-left: 1px;
   font-size: 16px;
+  padding: 50px 0 59px 0;
 }
 
 main .home .btn .get-started {
@@ -156,15 +158,27 @@ main .home .home_left .btn .arrow {
 
 }
 
-/*feature*/
+/*FEATURE*/
 
-.feature .description{
-  padding: 0 0 0 0;
-}
-
-.feature .description h2 {
+h2{
   font-size: 36px;
   font-weight: bold;
+}
+
+h3{
+  font-weight: 600;
+}
+
+h4{
+  font-size: 16px;
+  font-weight: bold; 
+}
+
+.feature {
+  margin: 0 0 120px 0;
+}
+
+.feature .description_2 h2 {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -173,49 +187,48 @@ main .home .home_left .btn .arrow {
   margin: 101px 0 54px 0;
 }
 
-.feature .description .figures figure{
+.feature .description_2 .figures figure{
   display: inline-block;
-  width: 20%;
+  width: 24%;
   vertical-align: top;
 }
 
-.feature .description .figures figure figcaption{
+.feature .description_2 .figures figure figcaption{
   padding: 0 57px 0 0 ;
 }
 
-.feature .description .figures figure h4{
-  font-weight: 600;
+.feature .description_2 .figures figure h3{
   padding: 0 0 13px 0;
 }
 
-.feature .description .figures figure p{
+.feature .description_2 .figures figure p{
   font-weight: 500;
   line-height: 26px;
   font-size: 16px;
 }
 
-.feature .description .figures figure svg{
+.feature .description_2 .figures figure svg{
   padding: 0 0 40px 0;
   vertical-align: top;
 }
 
-.feature .description .figures{
+.feature .description_2 .figures{
 background-image: url('../img/bg.svg');
-background-position: 0% 100%;
-background-repeat: no-repeat;
+/*background-position: 0% 100%;
+background-repeat: no-repeat;*/
 position: relative;
 min-height: 389px;
-min-width: 100%;
-padding-left: 150px;
+/* min-width: 100%; */
+padding-left: 140px;
 }
 
 
-.feature .description .button{
+.feature .description_2 .button{
   margin: 34px 0 0 0;
-  padding-left: 456px;
+  padding-left: 37%;
 }
 
-.feature .description .sign_up_now {
+.feature .description_2 .sign_up_now {
   font-size: 16px;
   padding: 14px 41px;
   text-transform: capitalize;
@@ -226,11 +239,61 @@ padding-left: 150px;
   border-radius: 5px;
 }
 
-/* validation */
+/* VALIDATION */
 
+.validation{
+display: inline-flex;
+justify-content: space-between;
+margin: 0 0 101px 0;
+}
 
+.validation .left_side_table{
+padding: 0 0 0 10%;
+width: 35%;
+}
 
+.validation .left_side_table .lst_h2{
+  padding: 0 0 22px 0;
+}
 
+.lst_h4_1, .lst_h4_2, .lst_h4_3{
+  padding: 0 0 12px 0;
+} 
+
+.validation .left_side_table .lst_p_2{
+  padding: 0 0 30px 0;
+}
+
+.validation .left_side_table .lst_p_1{
+  padding: 26px 0 18px 0;
+}
+
+.lst_p_3, .lst_p_4{
+padding: 0 0 25px 0;
+}
+
+.validation .left_side_table p{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.validation .right_side_table{
+  padding: 0 10% 0 0;
+  width: 38%;
+}
+
+/*MANAGERS*/
+
+.managers .left_side_managers{
+  padding: 0 0 0 140px;
+  display: inline-block;
+  width: 40%;
+}
+
+.managers .right_side_managers{
+  display: inline-block;
+  width: 40%;
+}
 /*
 .header_logo{
   display: flex;
