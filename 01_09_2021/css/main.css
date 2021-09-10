@@ -89,12 +89,12 @@ main .home {
 }
 
 main .home .home_right {
-  width: 40%;
+  width: 51.7%;
 }
 
 main .home .home_left {
   text-align: left;
-  width: 49%;
+  width: 49.3%;
 }
 
 main .home .home_left .title {
@@ -109,9 +109,9 @@ main .home .home_left .description{
   text-align: start;
   font-style: normal;
   font-size: 18px;
-  line-height: 1.9em;
-  padding: 0px 103px 0px 0px;
-
+  font-family: inherit;
+  line-height: 28px;
+  padding: 0px 76px 0px 0px;
 }
 
 main .home .btn {
@@ -248,8 +248,8 @@ margin: 0 0 101px 0;
 }
 
 .validation .left_side_table{
-padding: 0 0 0 10%;
-width: 35%;
+  padding: 0px 9.8% 0 10%;
+  width: 43.8%;
 }
 
 .validation .left_side_table .lst_h2{
@@ -278,22 +278,63 @@ padding: 0 0 25px 0;
 }
 
 .validation .right_side_table{
-  padding: 0 10% 0 0;
-  width: 38%;
+  padding: 0 8% 0 0;
+  width: 46.8%;
 }
 
 /*MANAGERS*/
 
 .managers .left_side_managers{
-  padding: 0 0 0 140px;
+  padding: 0 0 0 10%;
   display: inline-block;
-  width: 40%;
+  width: 47%;
+  vertical-align: top;
 }
 
 .managers .right_side_managers{
   display: inline-block;
-  width: 40%;
+  width: 34%;
 }
+
+.managers .right_side_managers p{
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.managers .right_side_managers figure{
+  margin: 30px 0 0 0;
+  line-height: 26px;
+  vertical-align: top;
+}
+
+.managers .right_side_managers figure svg{
+  margin: 0 30px 0 0;
+}
+.managers .right_side_managers figure figcaption{
+  font-size: 16px;
+  display: inline-block;
+  width: 80%;
+}
+
+.managers .right_side_managers .figure_2_1{
+  font-size: 16px;
+  display: inline-block;
+  width: 77%;
+}
+
+ 
+.managers .right_side_managers h2{
+  padding: 18px 0 22px 0;
+}
+
+.rsm_p_1{
+  padding: 58px 0 0 0;
+}
+
+/*MARKETS*/
+
+
+
 /*
 .header_logo{
   display: flex;
