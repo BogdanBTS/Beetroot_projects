@@ -284,6 +284,10 @@ padding: 0 0 25px 0;
 
 /*MANAGERS*/
 
+.managers{
+  margin: 0 0 104px 0;
+}
+
 .managers .left_side_managers{
   padding: 0 0 0 10%;
   display: inline-block;
