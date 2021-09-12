@@ -98,10 +98,11 @@
           <p class="description"> Tools, tutorials, design and innovation experts, all in one place! The most intuitive
               way to imagine your next user experience.
           </p>
-        <span class="btn">
-          <span>
+        <span class="btn"> <!-- тут нужен блочный тег -->
+          <span> <!-- безболезная теговая-обертка -->
             <button class="get-started" type="submit">Get started</button>
           </span>
+          <!-- для стрелки и текста будут разные ссылки ? -->
             <a href="/" class="btn--arrow">
               <i class="arrow"></i>  
             </a>
@@ -110,6 +111,10 @@
           </span>  
         </div>
         <span class="home_right">
+          <!-- Впринципе картинки заварачивать в строчные теги - незапрещенно. Да и img считают строчными елементам.
+          https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#styling_with_css
+          А как по мне, коректней былобы к ним относится как блочным. Ну дело каждого. Главное работает ))
+           -->
           <svg width="605" height="496" viewBox="0 0 605 496" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M330.352 465.954C207.094 453.421 105.073 363.113 60.3698 248C15.6671 132.887 183.974 34.8284 305.198 29.2104C426.421 23.5924 520 131.297 520 253.974C520 376.651 453.611 478.487 330.352 465.954Z" fill="#FFE5D2"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M482.001 343.694C482.102 343.635 482.73 344.465 483.66 346.099C484.593 347.727 485.754 350.2 486.833 353.392C489.045 359.752 490.433 369.142 489.61 379.383C488.794 389.621 486.427 398.609 484.601 405.007C482.733 411.407 481.358 415.292 481.121 415.227C480.859 415.154 481.787 411.135 483.32 404.672C484.814 398.21 486.945 389.27 487.743 379.241C488.546 369.215 487.404 360.089 485.569 353.78C483.786 347.44 481.707 343.846 482.001 343.694Z" fill="white"/>
@@ -224,7 +229,8 @@
       <section class="feature">
         <div class="description_2">   
         <h2>We design tools to unveil <br> your superpowers</h2>
-         <div class="figures"> 
+         <div class="figures">
+           <!-- выравнивание, каша теговая -->
             <figure>
               <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
@@ -495,10 +501,11 @@
           The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.
           </p>
           <div class="figures_2">
+            <!-- решение в принципи приемлемое )) Но былобы интересней используй ты маркированый список ul>li -->
             <figure class="figure_2_1">
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="#FF9900"/>
-              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="white" stroke-width="2.91667"/>
+              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="#FF9900"/> <!-- цвет не меняется, используй глоб-переменную -->
+              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="white" stroke-width="2.91667"/> <!-- а тут должен быть прозрачный -->
               <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="#FF9900" stroke-width="2.91667"/>
               <path d="M25.7657 12.2393C25.4533 11.9202 24.9468 11.9202 24.6343 12.2393L15.0498 22.0277L11.3657 18.2653C11.0533 17.9462 10.5468 17.9462 10.2343 18.2653C9.92189 18.5843 9.92189 19.1016 10.2343 19.4207L14.4841 23.7608C14.7964 24.0798 15.3033 24.0796 15.6155 23.7608L25.7657 13.3947C26.0781 13.0757 26.0781 12.5584 25.7657 12.2393Z" fill="white"/>
               </svg>
@@ -507,7 +514,7 @@
               </figcaption>
             </figure>
             <figure>
-              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- Копипаст свг. Используй свг ссылку -->
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="#FF9900"/>
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="white" stroke-width="2.91667"/>
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="#FF9900" stroke-width="2.91667"/>
@@ -518,7 +525,7 @@
              </figcaption>
             </figure>
             <figure>
-              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- Копипаст свг. Используй свг ссылку -->
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="#FF9900"/>
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="white" stroke-width="2.91667"/>
                 <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="#FF9900" stroke-width="2.91667"/>
