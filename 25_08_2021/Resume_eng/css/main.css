@@ -1,0 +1,76 @@
+/*2:15:54 about size of body tags FE (Snisar) Lesson 05*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+/*2:15:54 about size of body tags FE (Snisar) Lesson 05*/
+.container_head {
+  max-width: 1100px;
+  position: relative;
+  margin: 0px auto 100px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tel,
+.email,
+.social {
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  text-align: justify;
+  max-width: 80%;
+}
+
+h1 {
+  margin-block-start: 0.57em;
+  margin-block-end: 0.57em;
+}
+
+h2{
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h5{
+  font-size: 17px;
+  font-weight: 600;
+}
+
+img {
+  max-height: 244px;
+}
+
+.desk-left {
+  max-width: 50%;
+  display: inline-block;
+}
+
+.desk-right {
+  max-width: 50%;
+  display: inline;
+}
+
+.container_main{
+  max-width: 1100px;
+  position: relative;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_main h2{
+  max-width: 20%;
+}
+
+.container_footer {
+  max-width: 1100px;
+  margin: 100px auto auto auto;
+}
