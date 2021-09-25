@@ -34,7 +34,7 @@ body main div h2{
 
 
 body main div svg{
-    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 body main div svg:hover .shp0{
