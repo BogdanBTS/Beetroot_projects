@@ -1,0 +1,53 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body main{
+    display: flex;
+    max-width: 1100px;
+    margin: 25% auto 25% auto;
+    justify-content: space-evenly;
+}
+
+body main div {
+    text-align: center;
+    width: 21.3%;
+}
+
+body main div p {
+    
+    font-size: 13px;
+    line-height: 20px;
+    color: #9d9d9d; 
+    text-align: center;
+}
+
+body main div h2{
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: bold;
+    padding: 0px 0 12px 0;
+    text-transform: uppercase;
+}
+
+
+body main div svg{
+    padding: 0 0 10px 0;
+}
+
+body main div svg:hover .shp0{
+    fill:white;
+}
+
+body main div svg:hover .shp1{
+    fill:#1175b9;
+}
+
+
+
+
+
+
+
