@@ -39,10 +39,12 @@ body main div svg{
 
 body main div svg:hover .shp0{
     fill:white;
+    transition: all 0.5s ease;
 }
 
 body main div svg:hover .shp1{
-    fill:#1175b9;
+    fill:#2a69a6;
+    transition: all 0.5s ease;
 }
 
 
