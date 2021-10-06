@@ -7,14 +7,17 @@
   --btn-active-color-text: #fff;
   --btn-default-color-border: #bcd0e5;
   --btn-default-color-text: #000;
+  --icon-round: #ff9900;
 }
 
-body{
+body {
   font-family: 'Poppins', sans-serif;
 }
 
 
-header, main, footer {
+header,
+main,
+footer {
   width: 100%;
   max-width: 1400px;
   margin: auto;
@@ -27,12 +30,12 @@ header {
   box-sizing: border-box;
 }
 
-header .header_logo>a{
+header .header_logo>a {
   font-size: 35px;
   text-decoration: none;
   font-weight: bold;
   color: #173A56;
-  
+
 }
 
 header nav {
@@ -43,7 +46,7 @@ header nav {
 }
 
 header nav a {
-  margin: 0 10px;
+  margin: 0 9px;
   text-decoration: none;
   color: black;
   font-size: 14px;
@@ -57,13 +60,13 @@ header nav .header_btn {
 
 header nav .header_btn .header-sing-in,
 header nav .header_btn .header-sing-up {
-    font-size: 16px;
-    padding: 10px 24px;
-    text-transform: capitalize;
-    font-weight:600;
-    background: transparent;
-    border-radius: 5px;
-    border: 1px solid var(--btn-default-color-border);
+  font-size: 16px;
+  padding: 10px 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid var(--btn-default-color-border);
 }
 
 header nav .header_btn .active {
@@ -71,25 +74,27 @@ header nav .header_btn .active {
   color: var(--btn-active-color-text);
 }
 
+header nav .header_btn .header-sing-up {
+
+  margin-right: 15px;
+}
 
 
 /*MAIN*/
-main{
+main {
   margin-top: 56px;
 }
 
 main .home {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   padding-left: 10%;
   padding-right: 11%;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
 }
 
 main .home .home_right {
-  width: 51.7%;
+  width: 52.7%;
 }
 
 main .home .home_left {
@@ -102,10 +107,10 @@ main .home .home_left .title {
   font-size: 44px;
   line-height: 64px;
   color: #2F281E;
-  padding: 83px 0 40px;
+  padding: 45px 0 27px;
 }
 
-main .home .home_left .description{
+main .home .home_left .description {
   text-align: start;
   font-style: normal;
   font-size: 18px;
@@ -134,9 +139,9 @@ main .home .btn .get-started {
 
 main .home .home_left .btn .btn--watch_the_video {
   margin: 0 0px 0 2px;
-  color:  #ff9900;
- 
-  
+  color: #ff9900;
+
+
 }
 
 main .home .home_left .btn .btn--arrow {
@@ -144,7 +149,7 @@ main .home .home_left .btn .btn--arrow {
 }
 
 main .home .home_left .btn .arrow {
-  
+
   display: inline-block;
   margin-left: 29px;
   width: 0;
@@ -160,22 +165,32 @@ main .home .home_left .btn .arrow {
 
 /*FEATURE*/
 
-h2{
+h2 {
   font-size: 36px;
   font-weight: bold;
 }
 
-h3{
+h3 {
+  font-size: 22px;
   font-weight: 600;
 }
 
-h4{
+h4 {
   font-size: 16px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .feature {
   margin: 0 0 120px 0;
+}
+
+.feature .description_2 {
+  background-image: url(../img/bg.svg);
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 543px;
 }
 
 .feature .description_2 h2 {
@@ -187,48 +202,96 @@ h4{
   margin: 101px 0 54px 0;
 }
 
-.feature .description_2 .figures figure{
+.feature .description_2 .description_2_figures .figures figure {
   display: inline-block;
-  width: 24%;
+  width: 50%;
   vertical-align: top;
 }
 
-.feature .description_2 .figures figure figcaption{
-  padding: 0 57px 0 0 ;
+.feature .description_2 .description_2_figures .figures figure figcaption {
+  padding: 0 57px 0 0;
 }
 
-.feature .description_2 .figures figure h3{
+.feature .description_2 .description_2_figures .figures figure h3 {
   padding: 0 0 13px 0;
 }
 
-.feature .description_2 .figures figure p{
+.feature .description_2 .description_2_figures .figures figure p {
   font-weight: 500;
   line-height: 26px;
   font-size: 16px;
 }
 
-.feature .description_2 .figures figure svg{
+.feature .description_2 .description_2_figures .figures figure svg {
   padding: 0 0 40px 0;
   vertical-align: top;
 }
 
-.feature .description_2 .figures{
-background-image: url('../img/bg.svg'); /* Костыль, но рабочий! )))
+.feature .description_2 .description_2_figures .figures {
+  /* background-image: url('../img/bg.svg');
+  /* Костыль, но рабочий! )))
  Такие вещи принято делають не картинками, а на css. И используй для етого глоб-переменную цвета.
 */
-/*background-position: 0% 100%;
-background-repeat: no-repeat;*/
-position: relative;
-min-height: 389px;
-/* min-width: 100%; */
-padding-left: 140px;
+  /* position: relative; */
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 389px;*/
+  /* position:   relative; */
+
+  /*display: flex;
+  padding: 0 38px 0 140px;
+  justify-content: flex-start;*/
+
+  padding-left: 152px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-
-.feature .description_2 .button{
-  margin: 34px 0 0 0;
-  padding-left: 37%;
+main .feature .description_2 .description_2_figures {
+  display: flex;
+  box-sizing: border-box;
+  vertical-align: top;
 }
+
+main .feature .description_2 .description_2_figures .feature__figures--right {
+  display: flex;
+  min-width: 48%;
+  /* flex-direction: row; */
+  justify-content: flex-start;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure {
+  max-width: 42%;
+  box-sizing: border-box;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure figcaption {
+  padding: 0 57px 0 0;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure h3 {
+  padding: 0 0 13px 0;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure p {
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure svg {
+  padding: 0 0 40px 0;
+  vertical-align: top;
+}
+
+.feature .description_2 .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
 
 .feature .description_2 .sign_up_now {
   font-size: 16px;
@@ -243,103 +306,177 @@ padding-left: 140px;
 
 /* VALIDATION */
 
-.validation{
-display: inline-flex;
-justify-content: space-between;
-margin: 0 0 101px 0;
+.validation {
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 0 0 101px 0;
 }
 
-.validation .left_side_table{
-  padding: 0px 9.8% 0 10%;
+.validation .left_side_table {
+  padding: 0 0 0 10%;
   width: 43.8%;
+  box-sizing: border-box;
 }
 
-.validation .left_side_table .lst_h2{
-  padding: 0 0 22px 0;
+.validation .left_side_table .lst_h2 {
+  padding: 0 11% 22px 0;
+  /* max-width: 46.8%; */
+  box-sizing: border-box;
 }
 
-.lst_h4_1, .lst_h4_2, .lst_h4_3{
+
+.lst_h4_1,
+.lst_h4_2,
+.lst_h4_3 {
   padding: 0 0 12px 0;
-} 
+}
 
-.validation .left_side_table .lst_p_2{
+.validation .left_side_table .lst_p_2 {
   padding: 0 0 30px 0;
 }
 
-.validation .left_side_table .lst_p_1{
+.validation .left_side_table .lst_p_1 {
   padding: 26px 0 18px 0;
 }
 
-.lst_p_3, .lst_p_4{
-padding: 0 0 25px 0;
+.lst_p_3,
+.lst_p_4 {
+  padding: 0 0 25px 0;
 }
 
-.validation .left_side_table p{
+.validation .left_side_table p {
   font-size: 16px;
   line-height: 26px;
 }
 
-.validation .right_side_table{
-  padding: 0 8% 0 0;
-  width: 46.8%;
+.validation .right_side_table {
+  padding: 0 11% 0 0;
 }
 
 /*MANAGERS*/
 
-.managers{
+.managers {
   margin: 0 0 104px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.managers .left_side_managers{
+.managers .left_side_managers {
   padding: 0 0 0 10%;
   display: inline-block;
-  width: 47%;
-  vertical-align: top;
+  max-width: 47%;
 }
 
-.managers .right_side_managers{
+.managers .right_side_managers {
+  padding-right: 8%;
   display: inline-block;
-  width: 34%;
+  max-width: 37%;
 }
 
-.managers .right_side_managers p{
+.managers .right_side_managers p {
   line-height: 26px;
   font-size: 16px;
 }
 
-.managers .right_side_managers figure{
+.managers .right_side_managers figure {
   margin: 30px 0 0 0;
   line-height: 26px;
-  vertical-align: top;
+  /* vertical-align: top; */
+  display: flex;
+  align-items: center;
 }
 
-.managers .right_side_managers figure svg{
+.managers .right_side_managers figure svg {
   /* Если взялся использовать переменные для цветовой схемы то доводи дело до конца )) */
   margin: 0 30px 0 0;
 }
-.managers .right_side_managers figure figcaption{
+
+.managers .right_side_managers figure figcaption {
   font-size: 16px;
   display: inline-block;
   width: 80%;
 }
 
-.managers .right_side_managers .figure_2_1{
+.managers .right_side_managers .figure_2_1 {
   font-size: 16px;
   display: inline-block;
-  width: 77%;
+  max-width: 88%;
+  display: flex;
+  align-items: center;
 }
 
- 
-.managers .right_side_managers h2{
+
+.managers .right_side_managers h2 {
   padding: 18px 0 22px 0;
 }
 
-.rsm_p_1{
+.rsm_p_1 {
   padding: 58px 0 0 0;
 }
 
 /*MARKETS*/
 
+.markets {
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 0 0 146px 0;
+}
+
+.markets .left_side_table {
+  padding: 0px 0 0 10%;
+  max-width: 33.8%;
+}
+
+.markets .left_side_table .lst_h2 {
+  padding: 0 0 22px 0;
+}
+
+.lst_h4_1,
+.lst_h4_2,
+.lst_h4_3 {
+  padding: 0 0 12px 0;
+}
+
+.markets .left_side_table .lst_p_2 {
+  padding: 0 0 30px 0;
+}
+
+.markets .left_side_table .lst_p_1 {
+  padding: 26px 0 18px 0;
+}
+
+.lst_p_3,
+.lst_p_4 {
+  padding: 0 0 25px 0;
+}
+
+.markets .left_side_table p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.markets .right_side_table {
+  padding: 0 11% 0 0;
+  /* max-width: 46.8%;*/
+}
+
+/*FOOTER*/
+
+footer:before {
+  content: "";
+  display: block;
+  width: 79.2%;
+  height: 1px;
+  margin: 0 9.36% 102px 11.44%;
+  background-color: #BCD0E5;
+}
+
+footer .footer_main>a {
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #173A56;
+}
 
 
 /*
@@ -347,9 +484,9 @@ padding: 0 0 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;*/
-  /* padding-left: 15px; */
-  /* padding-right: 15px; */
- /*box-sizing: border-box; 
+/* padding-left: 15px; */
+/* padding-right: 15px; */
+/*box-sizing: border-box; 
 }*/
 
 /*header .header_logo a {
