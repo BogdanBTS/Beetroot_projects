@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -60,21 +61,18 @@
         <p class="description"> Tools, tutorials, design and innovation experts, all in one place! The most intuitive
           way to imagine your next user experience.
         </p>
-        <span class="btn">
+        <div class="btn">
           <!-- тут нужен блочный тег -->
-          <span>
-            <!-- безболезная теговая-обертка -->
-            <button class="get-started" type="submit">Get started</button>
-          </span>
+          <!-- безболезная теговая-обертка -->
+          <button class="get-started" type="submit">Get started</button>
           <!-- для стрелки и текста будут разные ссылки ? -->
           <a href="/" class="btn--arrow">
             <i class="arrow"></i>
+            <p>Watch the Video</p>
           </a>
-          <a href="/" class="btn--watch_the_video">
-            Watch the Video</a>
-        </span>
+        </div>
       </div>
-      <span class="home_right">
+      <div class="home_right">
         <!-- Впринципе картинки заварачивать в строчные теги - незапрещенно. Да и img считают строчными елементам.
           https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#styling_with_css
           А как по мне, коректней былобы к ним относится как блочным. Ну дело каждого. Главное работает ))
@@ -383,7 +381,7 @@
             d="M290.706 467.97C290.706 467.97 287.81 471.1 287.363 472.538C286.917 473.973 286.117 493.415 288.206 494.72C290.293 496.027 296 485.299 296 485.299C296 485.299 289.177 490.643 290.706 468.015"
             fill="#775298" />
         </svg>
-      </span>
+      </div>
     </section>
     <section class="feature">
       <div class="description_2">
@@ -502,7 +500,7 @@
               </svg>
               <figcaption>
                 <h3>Five second tests</h3>
-                <p>Personal choices and the <br> overall personality of the <br> person.</p>
+                <p>Personal choices and the overall personality of the person.</p>
               </figcaption>
             </figure>
           </span>
@@ -828,7 +826,7 @@
           <figure class="figure_2_1">
             <svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"
               id="icon_orange">
-              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="var(--icon-round" />
+              <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" fill="var(--icon-round)" />
               <!-- цвет не меняется, используй глоб-переменную -->
               <rect x="1.45833" y="1.45833" width="32.0833" height="32.0833" rx="12.3958" stroke="transperant"
                 stroke-width="2.91667" /> <!-- а тут должен быть прозрачный -->
@@ -996,14 +994,44 @@
     </section>
   </main>
   <footer>
-    <div class="footer_main">
-      <a href="/" title="home page">
-        <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink">
-          <use xlink:href="#logo_img"></use>
-        </svg>
-        <span>Productly</span>
-      </a>
+    <div class="footer_col">
+      <div class="footer_logo">
+        <a href="/" title="home page">
+          <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="#logo_img"></use>
+          </svg>
+          <span>Productly</span>
+        </a>
+      </div>
+      <div class="quick_links">
+        <p>Quick Links</p>
+        <ul>
+          <li><a href="#">
+              About Us
+            </a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="legal_stuff">
+        <p>Legal Stuff</p>
+        <ul>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Financing</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer_btn">
+        <p>Knowing you're always on the best energy deal.</p>
+        <form class="footer_sign_up" action="/" method="post">
+          <input class="footer_sign_up--input" type="tel" name="telephone" placeholder="Enter Your Phone Number"
+            maxlength="13">
+          <button type="submit" class="footer__btn--active">Sign Up Now</button>
+        </form>
+      </div>
     </div>
   </footer>
 </body>
