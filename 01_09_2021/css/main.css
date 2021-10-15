@@ -1012,6 +1012,10 @@ footer .footer_col .legal_stuff a {
     display: block;
   }
 
+  header .header_logo .wrapper_nav .nav_links li {
+    margin: 10px 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+  }
 
   header .header_logo .wrapper_nav .nav_links a {
     margin: 10px 0 10px 0;
