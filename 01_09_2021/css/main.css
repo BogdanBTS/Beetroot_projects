@@ -42,6 +42,10 @@ header .header_logo {
 
 }
 
+header .header_logo .wrapper_nav {
+  display: none;
+}
+
 header .header_logo>a {
   font-size: 29px;
   text-decoration: none;
@@ -923,123 +927,218 @@ footer .footer_col .legal_stuff a {
 
 @media (max-width: 768px) {
   header nav {
-    visibility: hidden;
+    display: none;
   }
 
-  main {
-    margin-top: 0;
+  header .header_logo {
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    padding-top: 5px;
+    flex-direction: row;
   }
 
-  /* HOME */
 
-  main .home .home_left {
-    width: 87.3%;
+
+  header .header_logo .wrapper_nav {
+    display: block;
+    width: 33px;
+    height: 27px;
   }
 
-  main .home .btn .get-started {
-    font-size: 15px;
-    padding: 9px 16px;
+  header .header_logo .wrapper_nav .nav_icon {
+    display: block;
+    padding: 0 0 13px 0;
+    cursor: pointer;
   }
 
-  main .home .home_right {
-    width: 75%;
+  header .header_logo .wrapper_nav .nav_links {
+    display: none;
   }
 
-  /* FEATURE */
-  .feature .description_2 {
-    background-image: none
-  }
-
-  main .feature .description_2 .description_2_figures {
-    flex-direction: column;
-  }
-
-  .feature .description_2 .description_2_figures .figures {
-    padding-left: 0;
-  }
-
-  .feature .description_2 .description_2_figures .figures figure {
-    padding-left: 70px;
-  }
-
-  main .feature .description_2 .description_2_figures .feature__figures--right figure {
-    padding-left: 70px;
-    max-width: 50%;
-  }
-
-  /* VALIDATION/DESIGN PROFESSIONALS */
-
-  .validation {
-    margin: 0 0 25px 0;
-  }
-
-  .validation .left_side_table {
-    width: 90%;
-  }
-
-  .validation .right_side_table {
-    padding: 10px 0 0 0;
-    width: 65%;
-  }
-
-  /* MANAGERS/PRODUCT MANAGERS */
-
-  .managers {
-    margin: 0 0 25px 0;
-  }
-
-  .managers .right_side_managers {
-    max-width: 90%;
-  }
-
-  .managers .left_side_managers {
-    max-width: 65%;
-  }
-
-  /* MARKETERS */
-  .markets {
-    margin: 0 0 25px 0;
-  }
-
-  .markets .left_side_table {
-    max-width: 90%;
-  }
-
-  .markets .right_side_table {
-    max-width: 65%;
-  }
-
-  /* FOOTER */
-  footer:before {
-    margin: 0 9.36% 30px 11.44%;
-  }
-
-  footer .footer_col .footer_logo {
+  header .header_logo .wrapper_nav .nav_links {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 44px;
     width: 100%;
-    padding-bottom: 30px;
+    background: rgb(118, 170, 172);
+    align-items: center;
     text-align: center;
   }
 
-  footer .footer_col .quick_links {
-    width: 44%;
-    text-align: center;
+  header .header_logo .wrapper_nav .nav_links {
+    /* visibility: hidden; */
   }
 
-  footer .footer_col .legal_stuff {
-    padding-top: 0;
-    width: 50%;
-    text-align: center;
+  header .header_logo .wrapper_nav .nav_icon span:not(:last-child) {
+    display: block;
+    border-bottom: var(--btn-active-color-bg) solid;
+    margin-bottom: 5px;
   }
 
-  .footer_btn {
-    padding-top: 30px;
-    text-align: center;
-    width: 74%;
-
+  header .header_logo .wrapper_nav .nav_icon span:last-child {
+    display: block;
+    border-bottom: var(--btn-active-color-bg) solid;
   }
 }
 
+header .header_logo .wrapper_nav:hover .nav_icon+.nav_links {
+  /* display: block; */
+  /* visibility: visible;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  margin-top: 35px;
+  right: 0px;
+  width: 100%;
+  background: rgba(95, 158, 160, 1);
+  flex-direction: column;
+  align-items: center; */
+  display: block;
+}
+
+header .header_logo .wrapper_nav:active .nav_icon+.nav_links {
+  /* display: block; */
+  /* visibility: visible;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  margin-top: 35px;
+  right: 0px;
+  width: 100%;
+  background: rgba(95, 158, 160, 1);
+  flex-direction: column;
+  align-items: center; */
+  display: block;
+}
+
+
+header .header_logo .wrapper_nav .nav_links a {
+  margin: 10px 0 10px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+main {
+  margin-top: 0;
+}
+
+/* HOME */
+
+main .home .home_left {
+  width: 87.3%;
+}
+
+main .home .btn .get-started {
+  font-size: 15px;
+  padding: 9px 16px;
+}
+
+main .home .home_right {
+  width: 75%;
+}
+
+/* FEATURE */
+.feature .description_2 {
+  background-image: none
+}
+
+main .feature .description_2 .description_2_figures {
+  flex-direction: column;
+}
+
+.feature .description_2 .description_2_figures .figures {
+  padding-left: 0;
+}
+
+.feature .description_2 .description_2_figures .figures figure {
+  padding-left: 70px;
+}
+
+main .feature .description_2 .description_2_figures .feature__figures--right figure {
+  padding-left: 70px;
+  max-width: 50%;
+}
+
+/* VALIDATION/DESIGN PROFESSIONALS */
+
+.validation {
+  margin: 0 0 25px 0;
+}
+
+.validation .left_side_table {
+  width: 90%;
+}
+
+.validation .right_side_table {
+  padding: 10px 0 0 0;
+  width: 65%;
+}
+
+/* MANAGERS/PRODUCT MANAGERS */
+
+.managers {
+  margin: 0 0 25px 0;
+}
+
+.managers .right_side_managers {
+  max-width: 90%;
+}
+
+.managers .left_side_managers {
+  max-width: 65%;
+}
+
+/* MARKETERS */
+.markets {
+  margin: 0 0 25px 0;
+}
+
+.markets .left_side_table {
+  max-width: 90%;
+}
+
+.markets .right_side_table {
+  max-width: 65%;
+}
+
+/* FOOTER */
+footer:before {
+  margin: 0 9.36% 30px 11.44%;
+}
+
+footer .footer_col .footer_logo {
+  width: 100%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+footer .footer_col .quick_links {
+  width: 44%;
+  text-align: center;
+}
+
+footer .footer_col .legal_stuff {
+  padding-top: 0;
+  width: 50%;
+  text-align: center;
+}
+
+.footer_btn {
+  padding-top: 30px;
+  text-align: center;
+  width: 74%;
+
+}
+}
+
 @media (max-width: 668px) {
+
+  header {
+    padding: 9px 70px 0px 50px;
+  }
 
   /* FEATURE */
 
