@@ -965,6 +965,8 @@ footer .footer_col .legal_stuff a {
     background: rgb(118, 170, 172);
     align-items: center;
     text-align: center;
+    box-shadow: 0em 2em 20px 20px #0e0e0e3b;
+    border-radius: 5px;
   }
 
   header .header_logo .wrapper_nav .nav_links {
