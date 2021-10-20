@@ -25,7 +25,7 @@ body main .main__clothes img {
 }
 
 body main .main__clothes img:hover {
-    opacity: 0.9;
+    opacity: 0.93;
     transition: .3s ease;
 }
 
@@ -65,17 +65,37 @@ body main .main__instagram img {
     max-height: 100%;
     display: block;
     height: auto;
+}
 
+body main .main__instagram .main__insta {
+    position: relative;
+}
+
+body main .main__instagram .main__insta::after {
+    content: "";
+    background: rgba(36, 32, 28, 0.673);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+body main .main__instagram .main__insta:hover::after {
+    content: "";
+    background: rgba(0, 0, 0, 0);
+    transition: .3s ease;
 }
 
 
+/* Для моей истории */
 /* body main .main__instagram .main__insta { */
 /* background-color: rgba(0, 0, 0, 0.8);  */
-/* background: linear-gradient(#fff, #fff);  */
+/* background: linear-gradient(90deg, #fff, #fff);  */
 /* } */
 
 
-body main .main__instagram .main__insta:hover {
-    opacity: 0.9;
+/* body main .main__instagram .main__insta:hover {
+    opacity: ;
     transition: .3s ease;
-}
+} */
