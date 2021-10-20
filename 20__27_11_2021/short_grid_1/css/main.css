@@ -1,0 +1,81 @@
+main {
+    max-width: 1700px;
+    margin: 0 auto;
+
+}
+
+body main .main__clothes {
+
+    display: grid;
+    grid-template-columns: 4.62fr 4.62fr 4.62fr;
+    grid-template-rows: 3.6fr 3.6fr 5.9fr;
+    row-gap: 4.1%;
+    column-gap: 3.9%;
+    padding: 4.8% 5.88% 0 5.88%;
+    margin-bottom: 4.8%;
+}
+
+body main .main__clothes img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    height: auto;
+
+
+}
+
+body main .main__clothes img:hover {
+    opacity: 0.9;
+    transition: .3s ease;
+}
+
+.main__clothes :nth-child(1) {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    justify-content: center;
+}
+
+.main__clothes :nth-child(2) {
+    grid-row: 1 / 2;
+    grid-column: 3 / -1;
+}
+
+
+.main__clothes :nth-child(3) {
+    grid-row: 2 / 3;
+    grid-column: 3 / -1;
+}
+
+.main__clothes :nth-child(4) {
+    grid-area: 3 / 1 / -1 / 2;
+}
+
+
+/* INSTAGRAM */
+
+body main .main__instagram {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+}
+
+body main .main__instagram img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    height: auto;
+
+}
+
+
+/* body main .main__instagram .main__insta { */
+/* background-color: rgba(0, 0, 0, 0.8);  */
+/* background: linear-gradient(#fff, #fff);  */
+/* } */
+
+
+body main .main__instagram .main__insta:hover {
+    opacity: 0.9;
+    transition: .3s ease;
+}
