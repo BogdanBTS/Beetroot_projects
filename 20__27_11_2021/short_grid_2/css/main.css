@@ -1,0 +1,150 @@
+ @font-face {
+     font-family: Hans Kendrick;
+     src: url('../Font/Regular/NeueHansKendrick-Regular.ttf');
+ }
+
+ body {
+     background: #e2e7ec;
+ }
+
+ main {
+     max-width: 1600px;
+     margin: 0 auto;
+ }
+
+ img {
+     max-width: 100%;
+     max-height: 100%;
+     display: block;
+     height: auto;
+     object-fit: cover;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ .articles {
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr;
+     position: relative;
+     gap: 20px;
+     padding: 91px 15.5%;
+ }
+
+ .articles__img-big {
+     grid-area: 1 / 1 / 2 / 3;
+     background-image: url(../img/big_car.jpg);
+     text-transform: uppercase;
+
+ }
+
+ .articles__img-big {
+     display: grid;
+     align-content: end;
+
+ }
+
+ .articles__date--color {
+     color: #fff;
+     font-size: 13px;
+     letter-spacing: 0px;
+     font-weight: 500;
+     font-family: "Hans Kendrick";
+     padding-left: 6%;
+     opacity: 0.3;
+ }
+
+ .articles__header--color {
+     color: #fff;
+     font-size: 30px;
+     letter-spacing: 1px;
+     line-height: 36px;
+     font-family: "Hans Kendrick";
+     padding: 21px 20% 35px 6%;
+ }
+
+ /* HOW TO FIND DESIGN */
+ .articles__first {
+     background: #fff;
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+     height: 540px;
+ }
+
+ .articles__date {
+
+     font-size: 13px;
+     letter-spacing: 0px;
+     color: #818181;
+     font-weight: 500;
+     font-family: "Hans Kendrick";
+     padding: 26px 0 0 7.5%;
+ }
+
+ .articles__header {
+     font-size: 20px;
+     letter-spacing: 1px;
+     line-height: 30px;
+     color: #1d1d1d;
+     font-family: "Hans Kendrick";
+     padding: 13px 7.5% 70px 7.5%;
+ }
+
+
+ .articles__auther {
+     padding: 0 0 25px 7.5%;
+ }
+
+
+
+ .articles__second {
+     background: #fff;
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+
+ .articles__third {
+     background: #fff;
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+
+ .articles__forth {
+     background: #fff;
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+
+
+ /* .big_car ::after {
+    background: url('../img/Layer/8.jpg') no-repeat, linear-gradient(135deg, #6ec575 0, #3b8686 100%);
+    height: 100%;
+    width: 100%;
+} 
+
+
+body .articles .img_big::before {
+    content: "";
+    background: no-repeat, linear-gradient(160deg, #FFE 20%, #000 60%);
+    background: rgba(36, 32, 28, 0.673);
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+
+}*/
