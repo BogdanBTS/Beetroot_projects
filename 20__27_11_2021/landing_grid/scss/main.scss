@@ -1,0 +1,56 @@
+// MAIN.CSS !!!!!
+
+//emphasis
+//soft
+//main
+
+$main:#111111;
+$emphasis:#4A4FF2;
+
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $main;
+}
+
+.wrapper__grid{
+max-width: 1130px;
+width: 100%;
+margin: 0 auto;
+padding: 0 10px 0 10px;
+display: grid;
+grid-template-rows: minmax(23px, auto) minmax(251px, auto) minmax(1960px, auto) minmax(106px, auto) minmax(823px, auto);
+grid-template-columns: 1fr;
+gap: 91px;
+}
+
+.header__inner{
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 1fr;
+justify-content: space-between;
+    .menu{
+    display: inline-grid;
+    justify-content: end;
+    &__list {
+        display: flex;
+        align-items: center;
+    }   
+    }
+    .menu__list-item + .menu__list-item{
+        margin-left: 29px;
+    }
+    
+    .menu_list-link{
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+    }
+    
+    
+}
+
