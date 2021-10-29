@@ -3,54 +3,516 @@
 //emphasis
 //soft
 //main
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
 
-$main:#111111;
-$emphasis:#4A4FF2;
+$main:#fff;
+$decor:#5474fd;
+$options:#e8e8e8;
 
 
-body{
-    font-family: 'Mulish', sans-serif;
+body {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: $main;
+    //cursor: pointer;
 }
 
-.wrapper__grid{
-max-width: 1130px;
-width: 100%;
-margin: 0 auto;
-padding: 0 10px 0 10px;
-display: grid;
-grid-template-rows: minmax(23px, auto) minmax(251px, auto) minmax(1960px, auto) minmax(106px, auto) minmax(823px, auto);
-grid-template-columns: 1fr;
-gap: 91px;
+
+.body {
+    padding: 15px;
 }
 
-.header__inner{
-display: grid;
-grid-template-columns: 2fr 1fr;
-grid-template-rows: 1fr;
-justify-content: space-between;
-    .menu{
-    display: inline-grid;
-    justify-content: end;
-    &__list {
+.header {
+    background: url(../images/header_cover.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__hero {
         display: flex;
+        flex-direction: column;
+        color: $main;
+        flex: 1 0 90%;
+        justify-content: center;
+    }
+
+    &__brand-title {
+        font-weight: 700;
+        text-align: center;
+        font-size: 48px;
+        letter-spacing: 4.8px;
+        color: $main;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 18px 0;
+    }
+
+    &__slogan-title {
+        font-weight: 400;
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 7px;
+        color: $main;
+        margin: 0 0 50px 0;
+    }
+
+    &__search-form {
+        box-sizing: border-box;
+        margin: 0 auto 120px auto;
+        width: 650px;
+        height: 61px;
+        position: relative;
+        display: block;
+        border: none;
+    }
+
+    &__input-text {
+        box-sizing: border-box;
+        width: 100%;
+        height: 60px;
+        border: none;
+        padding-right: 150px;
+        padding-left: 20px;
+        font-size: 13px;
+        letter-spacing: 3px;
+        color: #999999;
+        text-align: center;
+    }
+
+    &__search-button {
+        box-sizing: border-box;
+        width: 146px;
+        height: 56px;
+        padding-right: 20px;
+        background: $decor;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        border: none;
+        font-family: "Aleo", serif;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        font-size: 14px;
+        line-height: 26px;
+        color: $main;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__search-button::after {
+        position: absolute;
+        content: url(../images/search_icon.svg);
+        top: 19px;
+        right: 20px;
+    }
+
+    &__scroll-link {}
+
+    &__scroll-text {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: $main;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        padding-bottom: 25px;
+        text-align: center;
+        display: block;
+        text-transform: capitalize;
+    }
+
+    &__scroll-text::after {
+        content: url(../images/scroll.svg);
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    &__nav {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: $decor;
+        min-height: 80px;
+        padding: 0 18.64%;
         align-items: center;
-    }   
     }
-    .menu__list-item + .menu__list-item{
-        margin-left: 29px;
+
+    .header__logo {}
+
+    &__logo-link {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: $main;
+        text-transform: uppercase;
     }
-    
-    .menu_list-link{
-        font-size: 18px;
-        line-height: 23px;
-        letter-spacing: -0.346154px;
+
+    .nav__items {
+        display: flex;
     }
-    
-    
+
+    .nav__item {
+        box-sizing: border-box;
+        position: relative;
+
+        &:hover:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            top: 18px;
+            background: #ff6363;
+        }
+
+        &+.nav__item {
+            margin-left: 36px;
+        }
+    }
+
+    .nav_link {
+        box-sizing: border-box;
+        text-transform: uppercase;
+        font-family: "Aleo", serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $main;
+    }
+
+
+
 }
 
+//HEADER END !!!!!
+
+.why-us {
+    background: url(../images/why_us_cover.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 18.64%;
+    justify-content: space-between;
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 515px;
+        max-height: 360px;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-family: "Aleo", serif;
+        font-weight: 400;
+        color: $main;
+        margin-bottom: 65px;
+    }
+
+    &__paragraph {
+        font-size: 16px;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        color: $main;
+        margin-bottom: 45px;
+    }
+
+    &__link {}
+
+
+
+    &__img-container {
+        max-width: 555px;
+        min-width: 476px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img-one {
+        align-self: flex-start;
+        margin-bottom: 5px;
+    }
+
+    &__img-two {
+        align-self: flex-end;
+    }
+}
+
+.button-explore {
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 225px;
+    height: 60px;
+    background: linear-gradient(43deg, #496bfe 41%, $decor 41%);
+    text-decoration: none;
+    font-family: "Aleo", serif;
+    font-weight: 400;
+    color: $main;
+    text-transform: uppercase;
+}
+
+// end WHY US !!!!!
+
+.how-works {
+    height: 28vh;
+    background: #333333;
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    &__ico-row-flex {
+
+        display: flex;
+
+        height: fit-content;
+
+        justify-content: center;
+    }
+
+    &__decor-line {
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 155px;
+        align-self: flex-start;
+        padding-bottom: 115px;
+    }
+
+
+    &__decor-line::before {
+        content: '';
+        border-top: 1px dashed #868686;
+        border-radius: 50%;
+        width: 460px;
+        height: 498px;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+
+
+    &__ico-block {
+        margin-right: -73px;
+        margin-left: -70px;
+        padding-bottom: 35px;
+
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: fit-content;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__ico-text {
+        min-width: 212px;
+        font-size: 36px;
+        font-family: 'Aleo', serif;
+        color: $main;
+        line-height: 0.722;
+        text-align: center;
+    }
+
+    &__ico-pic {
+        width: fit-content;
+        margin-bottom: 35px;
+    }
+
+}
+
+// end HOW-WORKS !!!!
+
+.explore-option-one {
+    background: url(../images/booking_option_cover_1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 18.64%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.book-now-window {
+    width: 540px;
+    //height: 371px;
+    background-color: rgba(45, 38, 35, 0.9);
+    padding: 50px 30px;
+    margin-bottom: 100px;
+
+
+    &__country {
+        font-size: 20px;
+        font-weight: 400;
+        color: $options;
+        margin-bottom: 32px;
+
+    }
+
+    &__hotel {
+        font-size: 15px;
+        font-weight: 400;
+        color: $options;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+
+    }
+
+    &__paragraph {
+        font-size: 15px;
+        font-weight: 400;
+        color: $options;
+        line-height: 26px;
+        margin-bottom: 48px;
+    }
+}
+
+.explore-option-two {
+    background: url(../images/booking_option_cover_2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 18.64%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.testimonial {
+    height: 100vh;
+    background: url(../images/testemonial_guy_cover.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    &__title {
+        display: block;
+        font-size: 36px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        color: $main;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+    }
+
+    &__container-img-text {
+        display: flex;
+    }
+
+    &__quote {
+        box-sizing: border-box;
+        max-width: 665px;
+        background-color: #3d3d3ddd;
+        padding: 50px 50px;
+    }
+
+    &__quote-title {
+        font-size: 20px;
+        font-family: 'Aleo', serif;
+        font-weight: 400;
+        color: $options;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__quote-text {
+        font-size: 14px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        color: $options;
+        line-height: 26px;
+
+    }
+
+    &__quote-decor {
+
+        position: relative;
+        padding-right: 30px;
+        padding-top: 30px;
+        display: inline-block;
+
+        &::after {
+            content: url(../images/quote-left-solid-20px.svg);
+            position: absolute;
+            top: 0;
+
+        }
+
+    }
+
+}
+
+//end TESTIMONIAL !!!!
+
+.footer {
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+
+    &__center-conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__brand-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $main;
+        letter-spacing: 4.6px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    &__slogan-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: $main;
+        margin-bottom: 30px;
+        letter-spacing: 1.4px;
+
+    }
+
+    &__social-networks {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-network-link {
+        text-decoration: none;
+    }
+
+    &__social-network-link-icon {}
+
+    &__social-network-link-ico:hover {
+        fill: #4860c8;
+    }
+
+}
