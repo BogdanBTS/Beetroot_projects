@@ -1,0 +1,63 @@
+$breakpoints: (
+    "sm": 420px,
+    "md": 720px,
+    "xl": 1200px,
+    "defl": 1800px,
+);
+
+
+
+
+
+
+
+
+@mixin defl {
+    @media (max-width: map-get($breakpoints, "defl")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+
+
+@mixin md {
+    @media (max-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+}
+
+
+@mixin breakpoint ($bp: 0) {
+    @media (max-width: $bp) {
+
+    }
+}
+
+
+
+.for-test-size{
+    @include defl {
+        background: red;
+    }
+    @include xl {
+        background: blue;
+    }
+    @include md {
+        background: green;
+    }
+    @include sm {
+        background: black;
+    }
+}

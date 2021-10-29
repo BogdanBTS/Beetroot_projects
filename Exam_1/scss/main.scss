@@ -496,7 +496,6 @@ a {
         color: $main;
         margin-bottom: 30px;
         letter-spacing: 1.4px;
-
     }
 
     &__social-networks {
@@ -511,7 +510,7 @@ a {
 
     &__social-network-link-icon {}
 
-    &__social-network-link-ico:hover {
+    &__social-network-link-icon:hover {
         fill: #4860c8;
     }
 
