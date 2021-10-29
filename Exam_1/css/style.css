@@ -569,6 +569,9 @@ a {
   top: 19px;
   right: 20px;
 }
+.header__search-button:active {
+  background: #717db3;
+}
 .header__scroll-text {
   position: relative;
   font-size: 14px;
@@ -732,6 +735,11 @@ a {
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
+  -webkit-transition: 0.3ms ease;
+  transition: 0.3ms ease;
+}
+.button-explore:hover {
+  opacity: 0.8;
 }
 
 .how-works {

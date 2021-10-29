@@ -104,14 +104,19 @@ a {
         text-transform: uppercase;
         text-align: center;
         cursor: pointer;
+
+        &::after {
+            position: absolute;
+            content: url(../images/search_icon.svg);
+            top: 19px;
+            right: 20px;
+        }
+
+        &:active {
+            background: #717db3;
+        }
     }
 
-    &__search-button::after {
-        position: absolute;
-        content: url(../images/search_icon.svg);
-        top: 19px;
-        right: 20px;
-    }
 
     &__scroll-link {}
 
@@ -265,6 +270,11 @@ a {
     font-weight: 400;
     color: $main;
     text-transform: uppercase;
+    transition: 0.3ms ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 // end WHY US !!!!!
