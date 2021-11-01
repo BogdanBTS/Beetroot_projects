@@ -3,8 +3,6 @@
 //emphasis
 //soft
 //main
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
-
 
 $main:#fff;
 $decor:#5474fd;
@@ -25,7 +23,7 @@ body {
 a {
     text-decoration: none;
     color: $main;
-    //cursor: pointer;
+    //cursor: pointer;   
 }
 
 
@@ -109,7 +107,7 @@ a {
         width: 146px;
         height: 56px;
         padding-right: 20px;
-        background: #5474fd;
+        background: $decor;
         position: absolute;
         right: 2px;
         top: 2px;
@@ -280,7 +278,7 @@ a {
         font-size: 17px;
         font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
-        color: #e8e8e8;
+        color: $options;
         margin-bottom: 35px;
         line-height: 26px;
     }
@@ -386,7 +384,7 @@ a {
         min-width: 212px;
         font-size: 36px;
         font-family: "Aleo", serif;
-        color: #fff;
+        color: $main;
         line-height: 0.722;
         text-align: center;
         padding-top: 34px;
@@ -469,7 +467,7 @@ a {
         font-size: 36px;
         font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
-        color: #fff;
+        color: $main;
         width: 100%;
         margin-bottom: 94px;
         padding: 121px 0 0 0;
@@ -552,7 +550,7 @@ a {
     &__brand-title {
         font-size: 24px;
         font-weight: 700;
-        color: #fff;
+        color: $main;
         letter-spacing: 2.6px;
         margin-bottom: 15px;
         text-transform: uppercase;
@@ -561,7 +559,7 @@ a {
     &__slogan-title {
         font-size: 16px;
         font-weight: 400;
-        color: #fff;
+        color: $main;
         margin-bottom: 30px;
         letter-spacing: 0.4px;
     }
