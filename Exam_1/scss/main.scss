@@ -3,6 +3,7 @@
 //emphasis
 //soft
 //main
+/* у тебя же есть отдельный файл для шрифтов */
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
 
 
@@ -15,7 +16,7 @@ $options:#e8e8e8;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Круто! - я сам не знал о таком свойстве */
 }
 
 body {
@@ -61,7 +62,7 @@ a {
         letter-spacing: 2.8px;
         color: $main;
         text-transform: uppercase;
-        text-align: center;
+        text-align: center; /* Дублирование */
         margin: 0 0 6px 0;
         padding: 12.3% 0 0 0;
 
@@ -373,8 +374,14 @@ a {
 
 
     &__ico-block {
+        /* Прекрассно что ты заюзал отрицательный ...
+        Но когда ты будешь адаптировать, или решат заменить ету полосу у тебя сломается основная верстка.
+        Если ломать поведение елемента то постарайся ето делать в одном месте.
+        Тоесть для __decor-line => margin: 0 -67px
+        */
         margin-right: -67px;
         margin-left: -68px;
+
         padding-top: 26px;
         display: flex;
         flex-direction: column;
@@ -523,6 +530,11 @@ a {
         display: inline-block;
 
         &::after {
+            /* Картинка супер =))
+            Но начинай уже использовать иконки из библиотеки
+            FontAwesome  => https://fontawesome.com/v5.15/icons/quote-left?style=solid
+            MaterialIcons => https://google.github.io/material-design-icons/   + https://fonts.google.com/icons?selected=Material+Icons
+            */
             content: url(../images/quote-left-solid-20px.svg);
             position: absolute;
             top: 15px;
@@ -540,7 +552,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 30vh;
+    height: 30vh; /* Высоту не стоит задавать, ее нужно набирать*/
 
     &__center-conteiner {
         display: flex;
