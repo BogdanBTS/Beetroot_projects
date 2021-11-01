@@ -5,10 +5,18 @@
 //main
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
 
+
 $main:#fff;
 $decor:#5474fd;
 $options:#e8e8e8;
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -21,43 +29,49 @@ a {
 }
 
 
-.body {
-    padding: 15px;
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header {
-    background: url(../images/header_cover.jpg);
-    height: 100vh;
+    background: url(../images/header_cover.jpg) no-repeat;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    &__hero {
+
+    &__inner {
+        flex-basis: 91%;
         display: flex;
         flex-direction: column;
-        color: $main;
-        flex: 1 0 90%;
         justify-content: center;
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     &__brand-title {
         font-weight: 700;
         text-align: center;
         font-size: 48px;
-        letter-spacing: 4.8px;
+        letter-spacing: 2.8px;
         color: $main;
         text-transform: uppercase;
         text-align: center;
-        margin: 0 0 18px 0;
+        margin: 0 0 6px 0;
+        padding: 12.3% 0 0 0;
+
     }
 
     &__slogan-title {
         font-weight: 400;
         text-align: center;
         font-size: 22px;
-        letter-spacing: 7px;
+        letter-spacing: 5px;
         color: $main;
         margin: 0 0 50px 0;
     }
@@ -65,7 +79,8 @@ a {
     &__search-form {
         box-sizing: border-box;
         margin: 0 auto 120px auto;
-        width: 650px;
+        width: 100%;
+        max-width: 650px;
         height: 61px;
         position: relative;
         display: block;
@@ -77,12 +92,16 @@ a {
         width: 100%;
         height: 60px;
         border: none;
-        padding-right: 150px;
+        padding-right: 169px;
         padding-left: 20px;
         font-size: 13px;
-        letter-spacing: 3px;
-        color: #999999;
+        color: #8c8c8c;
+        letter-spacing: 2.5px;
         text-align: center;
+
+        &::placeholder {
+            color: #8c8c8c;
+        }
     }
 
     &__search-button {
@@ -90,7 +109,7 @@ a {
         width: 146px;
         height: 56px;
         padding-right: 20px;
-        background: $decor;
+        background: #5474fd;
         position: absolute;
         right: 2px;
         top: 2px;
@@ -109,7 +128,11 @@ a {
             position: absolute;
             content: url(../images/search_icon.svg);
             top: 19px;
-            right: 20px;
+            right: 16px;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
 
         &:active {
@@ -118,12 +141,16 @@ a {
     }
 
 
-    &__scroll-link {}
+    &__scroll-link {
+        margin: 0 auto;
+        display: block;
+        width: 107px;
+    }
 
     &__scroll-text {
         position: relative;
         font-size: 14px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         color: $main;
         font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
@@ -131,6 +158,11 @@ a {
         text-align: center;
         display: block;
         text-transform: capitalize;
+
+        &:hover {
+            font-size: 15px;
+            padding-bottom: 24px;
+        }
     }
 
     &__scroll-text::after {
@@ -143,13 +175,22 @@ a {
 
     &__nav {
         box-sizing: border-box;
+        background: $decor;
+        min-height: 80px;
+
+        //    padding: 0 18.64%;
+
+    }
+
+    &__nav-inner {
+        max-width: 1110px;
         display: flex;
         justify-content: space-between;
         width: 100%;
         background: $decor;
         min-height: 80px;
-        padding: 0 18.64%;
         align-items: center;
+        margin: 0 auto;
     }
 
     .header__logo {}
@@ -182,7 +223,7 @@ a {
         }
 
         &+.nav__item {
-            margin-left: 36px;
+            margin-left: 42px;
         }
     }
 
@@ -193,6 +234,7 @@ a {
         font-weight: 400;
         font-size: 14px;
         color: $main;
+
     }
 
 
@@ -204,43 +246,53 @@ a {
 .why-us {
     background: url(../images/why_us_cover.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 18.64%;
-    justify-content: space-between;
+    //height: 100vh;
+    padding: 120px 0;
+
+    &__container {
+        max-width: 1110px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &__text-container {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        max-width: 515px;
-        max-height: 360px;
+        max-width: 525px;
+        padding: 68px 0 0 0;
+        box-sizing: border-box;
     }
+
 
     &__title {
         font-size: 36px;
         font-family: "Aleo", serif;
         font-weight: 400;
         color: $main;
-        margin-bottom: 65px;
+        margin-bottom: 55px;
     }
 
     &__paragraph {
-        font-size: 16px;
+        font-size: 17px;
         font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
-        color: $main;
-        margin-bottom: 45px;
+        color: #e8e8e8;
+        margin-bottom: 35px;
+        line-height: 26px;
     }
+
 
     &__link {}
 
 
 
     &__img-container {
-        max-width: 555px;
-        min-width: 476px;
+        max-width: 476px;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -269,29 +321,31 @@ a {
     font-family: "Aleo", serif;
     font-weight: 400;
     color: $main;
+    letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.3ms ease;
 
     &:hover {
-        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    &:active {
+        background: linear-gradient(43deg, #496bfe 41%, #496bfe 41%);
     }
 }
 
 // end WHY US !!!!!
 
 .how-works {
-    height: 28vh;
     background: #333333;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 47px;
+    padding-bottom: 119px;
 
     &__ico-row-flex {
-
         display: flex;
-
         height: fit-content;
-
         justify-content: center;
+        align-items: flex-end;
     }
 
     &__decor-line {
@@ -305,7 +359,7 @@ a {
 
 
     &__decor-line::before {
-        content: '';
+        content: "";
         border-top: 1px dashed #868686;
         border-radius: 50%;
         width: 460px;
@@ -319,28 +373,23 @@ a {
 
 
     &__ico-block {
-        margin-right: -73px;
-        margin-left: -70px;
-        padding-bottom: 35px;
-
-
+        margin-right: -67px;
+        margin-left: -68px;
+        padding-top: 26px;
         display: flex;
-
         flex-direction: column;
-
         width: fit-content;
-
         align-items: center;
-        justify-content: center;
     }
 
     &__ico-text {
         min-width: 212px;
         font-size: 36px;
-        font-family: 'Aleo', serif;
-        color: $main;
+        font-family: "Aleo", serif;
+        color: #fff;
         line-height: 0.722;
         text-align: center;
+        padding-top: 34px;
     }
 
     &__ico-pic {
@@ -354,19 +403,20 @@ a {
 
 .explore-option-one {
     background: url(../images/booking_option_cover_1.jpg) no-repeat;
-    background-position: center;
+    /* background-position: left; */
     background-size: cover;
-    height: 100vh;
-    padding: 0 18.64%;
-    display: flex;
-    align-items: flex-end;
+    padding: 230px 0 1px 0;
+    // height: 100vh;
+    //padding: 0 18.64%;
+
 }
 
+
+
 .book-now-window {
-    width: 540px;
-    //height: 371px;
+    max-width: 539px;
     background-color: rgba(45, 38, 35, 0.9);
-    padding: 50px 30px;
+    padding: 53px 15px 46px 29px;
     margin-bottom: 100px;
 
 
@@ -374,75 +424,82 @@ a {
         font-size: 20px;
         font-weight: 400;
         color: $options;
-        margin-bottom: 32px;
+        margin-bottom: 25px;
 
     }
 
     &__hotel {
-        font-size: 15px;
+        line-height: 26px;
         font-weight: 400;
         color: $options;
         text-transform: uppercase;
-        margin-bottom: 30px;
-
+        margin-bottom: 18px;
+        font-size: 19px;
 
     }
 
     &__paragraph {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
         color: $options;
         line-height: 26px;
-        margin-bottom: 48px;
+        margin-bottom: 43px;
+
     }
 }
 
 .explore-option-two {
     background: url(../images/booking_option_cover_2.jpg) no-repeat;
-    background-position: center;
     background-size: cover;
-    height: 100vh;
-    padding: 0 18.64%;
+    padding: 230px 0 1px 0;
+}
+
+.explore-modefication {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .testimonial {
-    height: 100vh;
     background: url(../images/testemonial_guy_cover.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
 
     &__title {
         display: block;
+        margin: 0 auto;
         font-size: 36px;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
-        color: $main;
-        text-transform: uppercase;
-        margin-bottom: 100px;
+        color: #fff;
+        width: 100%;
+        margin-bottom: 94px;
+        padding: 121px 0 0 0;
+        max-width: 360px;
     }
 
     &__container-img-text {
+        max-width: 1110px;
         display: flex;
+        margin: 0 auto;
+        padding-bottom: 197px;
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: right;
     }
 
     &__quote {
         box-sizing: border-box;
         max-width: 665px;
         background-color: #3d3d3ddd;
-        padding: 50px 50px;
+        padding: 48px 20px 0 58px;
     }
 
     &__quote-title {
         font-size: 20px;
-        font-family: 'Aleo', serif;
+        font-family: "Aleo", serif;
         font-weight: 400;
         color: $options;
         text-transform: uppercase;
@@ -451,7 +508,7 @@ a {
 
     &__quote-text {
         font-size: 14px;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         font-weight: 400;
         color: $options;
         line-height: 26px;
@@ -462,13 +519,13 @@ a {
 
         position: relative;
         padding-right: 30px;
-        padding-top: 30px;
+        padding-top: 44px;
         display: inline-block;
 
         &::after {
             content: url(../images/quote-left-solid-20px.svg);
             position: absolute;
-            top: 0;
+            top: 15px;
 
         }
 
@@ -482,20 +539,21 @@ a {
     background: #232323;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 30vh;
 
     &__center-conteiner {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 18px;
     }
 
     &__brand-title {
         font-size: 24px;
         font-weight: 700;
-        color: $main;
-        letter-spacing: 4.6px;
+        color: #fff;
+        letter-spacing: 2.6px;
         margin-bottom: 15px;
         text-transform: uppercase;
     }
@@ -503,9 +561,9 @@ a {
     &__slogan-title {
         font-size: 16px;
         font-weight: 400;
-        color: $main;
+        color: #fff;
         margin-bottom: 30px;
-        letter-spacing: 1.4px;
+        letter-spacing: 0.4px;
     }
 
     &__social-networks {

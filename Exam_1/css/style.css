@@ -454,6 +454,15 @@ textarea {
 {  font-family: 'Josefin Sans';
     src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 }*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -463,14 +472,17 @@ a {
   color: #fff;
 }
 
-.body {
-  padding: 15px;
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
-  background: url(../images/header_cover.jpg);
-  height: 100vh;
+  background: url(../images/header_cover.jpg) no-repeat;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,14 +490,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.header__hero {
+.header__inner {
+  -ms-flex-preferred-size: 91%;
+      flex-basis: 91%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,29 +501,29 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #fff;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 90%;
-          flex: 1 0 90%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
 }
 .header__brand-title {
   font-weight: 700;
   text-align: center;
   font-size: 48px;
-  letter-spacing: 4.8px;
+  letter-spacing: 2.8px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 0 18px 0;
+  margin: 0 0 6px 0;
+  padding: 12.3% 0 0 0;
 }
 .header__slogan-title {
   font-weight: 400;
   text-align: center;
   font-size: 22px;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   color: #fff;
   margin: 0 0 50px 0;
 }
@@ -523,7 +531,8 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto 120px auto;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: 61px;
   position: relative;
   display: block;
@@ -535,12 +544,27 @@ a {
   width: 100%;
   height: 60px;
   border: none;
-  padding-right: 150px;
+  padding-right: 169px;
   padding-left: 20px;
   font-size: 13px;
-  letter-spacing: 3px;
-  color: #999999;
+  color: #8c8c8c;
+  letter-spacing: 2.5px;
   text-align: center;
+}
+.header__input-text::-webkit-input-placeholder {
+  color: #8c8c8c;
+}
+.header__input-text::-moz-placeholder {
+  color: #8c8c8c;
+}
+.header__input-text:-ms-input-placeholder {
+  color: #8c8c8c;
+}
+.header__input-text::-ms-input-placeholder {
+  color: #8c8c8c;
+}
+.header__input-text::placeholder {
+  color: #8c8c8c;
 }
 .header__search-button {
   -webkit-box-sizing: border-box;
@@ -567,15 +591,23 @@ a {
   position: absolute;
   content: url(../images/search_icon.svg);
   top: 19px;
-  right: 20px;
+  right: 16px;
+}
+.header__search-button:hover {
+  text-decoration: underline;
 }
 .header__search-button:active {
   background: #717db3;
 }
+.header__scroll-link {
+  margin: 0 auto;
+  display: block;
+  width: 107px;
+}
 .header__scroll-text {
   position: relative;
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #fff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -583,6 +615,10 @@ a {
   text-align: center;
   display: block;
   text-transform: capitalize;
+}
+.header__scroll-text:hover {
+  font-size: 15px;
+  padding-bottom: 24px;
 }
 .header__scroll-text::after {
   content: url(../images/scroll.svg);
@@ -595,6 +631,11 @@ a {
 .header__nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background: #5474fd;
+  min-height: 80px;
+}
+.header__nav-inner {
+  max-width: 1110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,10 +645,10 @@ a {
   width: 100%;
   background: #5474fd;
   min-height: 80px;
-  padding: 0 18.64%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
 }
 .header__logo-link {
   font-family: "Josefin Sans", sans-serif;
@@ -637,7 +678,7 @@ a {
   background: #ff6363;
 }
 .header .nav__item + .nav__item {
-  margin-left: 36px;
+  margin-left: 42px;
 }
 .header .nav_link {
   -webkit-box-sizing: border-box;
@@ -652,14 +693,18 @@ a {
 .why-us {
   background: url(../images/why_us_cover.jpg) no-repeat;
   background-size: cover;
-  height: 100vh;
+  padding: 120px 0;
+}
+.why-us__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 18.64%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -675,26 +720,29 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  max-width: 515px;
-  max-height: 360px;
+  max-width: 525px;
+  padding: 68px 0 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .why-us__title {
   font-size: 36px;
   font-family: "Aleo", serif;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 .why-us__paragraph {
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  color: #fff;
-  margin-bottom: 45px;
+  color: #e8e8e8;
+  margin-bottom: 35px;
+  line-height: 26px;
 }
 .why-us__img-container {
-  max-width: 555px;
-  min-width: 476px;
+  max-width: 476px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -734,19 +782,22 @@ a {
   font-family: "Aleo", serif;
   font-weight: 400;
   color: #fff;
+  letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-transition: 0.3ms ease;
   transition: 0.3ms ease;
 }
 .button-explore:hover {
-  opacity: 0.8;
+  text-decoration: underline;
+}
+.button-explore:active {
+  background: linear-gradient(43deg, #496bfe 41%, #496bfe 41%);
 }
 
 .how-works {
-  height: 28vh;
   background: #333333;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 47px;
+  padding-bottom: 119px;
 }
 .how-works__ico-row-flex {
   display: -webkit-box;
@@ -758,6 +809,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .how-works__decor-line {
   position: relative;
@@ -781,9 +835,9 @@ a {
           transform: translate(-50%, 0%);
 }
 .how-works__ico-block {
-  margin-right: -73px;
-  margin-left: -70px;
-  padding-bottom: 35px;
+  margin-right: -67px;
+  margin-left: -68px;
+  padding-top: 26px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,9 +851,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .how-works__ico-text {
   min-width: 212px;
@@ -808,6 +859,7 @@ a {
   color: #fff;
   line-height: 0.722;
   text-align: center;
+  padding-top: 34px;
 }
 .how-works__ico-pic {
   width: -webkit-fit-content;
@@ -818,102 +870,92 @@ a {
 
 .explore-option-one {
   background: url(../images/booking_option_cover_1.jpg) no-repeat;
-  background-position: center;
+  /* background-position: left; */
   background-size: cover;
-  height: 100vh;
-  padding: 0 18.64%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  padding: 230px 0 1px 0;
 }
 
 .book-now-window {
-  width: 540px;
+  max-width: 539px;
   background-color: rgba(45, 38, 35, 0.9);
-  padding: 50px 30px;
+  padding: 53px 15px 46px 29px;
   margin-bottom: 100px;
 }
 .book-now-window__country {
   font-size: 20px;
   font-weight: 400;
   color: #e8e8e8;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 .book-now-window__hotel {
-  font-size: 15px;
+  line-height: 26px;
   font-weight: 400;
   color: #e8e8e8;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
+  font-size: 19px;
 }
 .book-now-window__paragraph {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: #e8e8e8;
   line-height: 26px;
-  margin-bottom: 48px;
+  margin-bottom: 43px;
 }
 
 .explore-option-two {
   background: url(../images/booking_option_cover_2.jpg) no-repeat;
-  background-position: center;
   background-size: cover;
-  height: 100vh;
-  padding: 0 18.64%;
+  padding: 230px 0 1px 0;
+}
+
+.explore-modefication {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .testimonial {
-  height: 100vh;
   background: url(../images/testemonial_guy_cover.jpg) no-repeat;
   background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .testimonial__title {
   display: block;
+  margin: 0 auto;
   font-size: 36px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 100px;
+  width: 100%;
+  margin-bottom: 94px;
+  padding: 121px 0 0 0;
+  max-width: 360px;
 }
 .testimonial__container-img-text {
+  max-width: 1110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
+  padding-bottom: 197px;
+}
+.testimonial__img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
 }
 .testimonial__quote {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 665px;
   background-color: #3d3d3ddd;
-  padding: 50px 50px;
+  padding: 48px 20px 0 58px;
 }
 .testimonial__quote-title {
   font-size: 20px;
@@ -933,13 +975,13 @@ a {
 .testimonial__quote-decor {
   position: relative;
   padding-right: 30px;
-  padding-top: 30px;
+  padding-top: 44px;
   display: inline-block;
 }
 .testimonial__quote-decor::after {
   content: url(../images/quote-left-solid-20px.svg);
   position: absolute;
-  top: 0;
+  top: 15px;
 }
 
 .footer {
@@ -950,9 +992,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 30vh;
 }
 .footer__center-conteiner {
@@ -966,12 +1008,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 18px;
 }
 .footer__brand-title {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 4.6px;
+  letter-spacing: 2.6px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -980,7 +1023,7 @@ a {
   font-weight: 400;
   color: #fff;
   margin-bottom: 30px;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.4px;
 }
 .footer__social-networks {
   width: 100%;
