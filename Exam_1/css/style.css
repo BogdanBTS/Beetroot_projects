@@ -492,8 +492,8 @@ a {
           flex-direction: column;
 }
 .header__inner {
-  -ms-flex-preferred-size: 91%;
-      flex-basis: 91%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
