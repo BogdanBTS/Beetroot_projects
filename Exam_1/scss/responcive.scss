@@ -63,7 +63,7 @@
         position: fixed;
         right: -100%;
         top: 0;
-        width: 100%;
+        width: 30%;
         height: 100%;
         background: $decor;
         height: 100vh;
@@ -91,7 +91,7 @@
 
     .fas.fa-times {
         position: absolute;
-        bottom: 25px;
+        top: 25px;
         right: 10px;
         cursor: pointer;
         font-size: 30px;
