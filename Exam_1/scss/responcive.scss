@@ -1,0 +1,109 @@
+@media screen and (max-width: 980px) {
+    .header {
+        &__nav-inner {
+            padding: 0 10px;
+        }
+    }
+
+    .why-us {
+        &__container {
+            padding: 0 10px;
+        }
+    }
+
+    .how-works {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &__ico-block {
+            margin-right: -65px;
+            margin-left: -64px;
+            padding-top: 40px;
+        }
+
+        &__ico-text {
+            font-size: 20px;
+            min-width: 110px;
+            padding-top: 15px;
+        }
+
+        &__decor-line {
+
+            width: 310px;
+            height: 173px;
+            top: -14px;
+            padding-bottom: 36px;
+
+            ::before {
+
+                width: 376px;
+                height: 503px;
+
+            }
+        }
+    }
+
+
+    .explore-option-one {
+        padding: 230px 10px 1px 10px;
+    }
+
+    .explore-option-two {
+        padding: 230px 10px 1px 10px;
+    }
+
+    .testimonial {
+        padding: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav__items {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $decor;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5ms ease-in-out;
+    }
+
+    .nav__item {
+        margin: 20px 0;
+    }
+
+    .nav_link {
+        font-size: 20px;
+    }
+
+    .nav__item+.nav__item {
+        margin-left: 0px;
+    }
+
+    .responsive-close {
+        display: block;
+    }
+
+    .fas.fa-times {
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .fas.fa-bars {
+        display: block;
+        color: $main;
+        font-size: 20px;
+    }
+
+    #responsive-menu:checked~ul {
+        right: 0;
+    }
+}
