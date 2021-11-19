@@ -1,81 +1,232 @@
+//+1. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+//+2. Запросить 2 числа и найти только наибольший общий делитель.
+//+3. Запросить у пользователя число и вывести все делители этого числа.
+//+4. Определить количество цифр в введенном числе.
+//+5. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+//+6. Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.
+//+7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).
+//+8. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.
+//+9. Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.
+//10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+
+
+
+/*1. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+
+
+let num1 = Number(prompt('Введіть перше число діапазону:'));
+let num2 = Number(prompt('Введіть друге число діапазону:'));
+let sum = 0;
+
+for (let i = num1; i <= num2; i++) {
+  sum = sum + i;
+}
+
+console.log(`Сумма всех чисел дипазона ${sum}`);
+*/
+
+
+
+
+/*2. Запросить 2 числа и найти только наибольший общий делитель.
+
+let num1 = Number(prompt('Введіть перше число:'));
+let num2 = Number(prompt('Введіть друге число:'));
+let common;
+
+for(let index = 1; index <= num1; index++){
+  if(num1 % index === 0 && num2 % index === 0 ){
+    common = index;
+    console.log(index)
+  } else {}
+}
+console.log (`Найбільший спільний дільник чисел, ${num1} та ${num2} є ${common}.`);
+*/
+
+
+/*3. Запросить у пользователя число и вывести все делители этого числа.
+
+let num = Number(prompt('Введіть число:'));
+
+for (let index = 1; index <= num; index++) {
+  if (num % index === 0) {
+    console.log(index)
+  } else{}
+};
+*/
+
+
+/*4. Определить количество цифр в введенном числе.
+
+
+let number = 12;
+let totalQuantity = 0;
+for (let i=1; number>=1; i++){
+  number /= 10;
+  totalQuantity = i;
+}
+console.log(`Количество цифр в введенном числе = ${totalQuantity}`);
+*/
+
+
+/*5. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+
+let userNumber = 0;
+let minus = 0;
+let plus = 0;
+let zeros = 0 ;
+let even = 0;
+let odd = 0;
+
+
+for(i = 0; i < 10;   i++ ){
+  userNumber = Number(prompt('chyslo'));
+  
+  if (userNumber < 0){
+   minus = minus + 1;
+} else if (userNumber > 0) {
+  plus = plus + 1;
+} else {
+  zeros = zeros + 1;
+}
+if (userNumber % 2 === 0) {
+  even= even + 1 ;
+} else {
+  odd = odd + 1;
+}
+}
+console.log(`less than 0 ${minus}, more than 0 ${plus}, zero ${zeros}, even numbers ${even}, odd numbers ${odd}.`);
+*/
+
+
+/*6. Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.
+
+
+do {
+  //     let number1 = parseInt(prompt('Enter first number')) ;
+  //     let number2 = parseInt(prompt('Enter second number'));
+  //     let symbol = prompt('Enter symbol');
+  //     switch (symbol) {
+  //         case '+':
+  //             alert(number1 + number2);
+  //             break;
+  //         case '-':
+  //             alert(number1 - number2);
+  //             break;
+  //         case '*':
+  //             alert(number1 * number2);
+  //             break;
+  //         case '/':
+  //             alert(number1 / number2);
+  //             break;
+  //     }
+  // } while (confirm('Repeat?'));
+*/
+
+
+/*7. Запросить у пользователя число 
+и на сколько цифр его сдвинуть.
+Сдвинуть цифры числа
+и вывести результат
+(если число 123456 сдвинуть на 2 цифры, то получится 345612).
+
+let strNumber = prompt("Введите число!");
+let shiftNumber = prompt("На сколько цифр его сдвинуть?");
+let result;
+
+for (let i = 0; i = 1; i++){
+  result = Number(strNumber.slice(shiftNumber) + strNumber.slice(0, shiftNumber));
+}
+ console.log(`Результат: ${result}`);
+*/
+
+
+
+
+/*8. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.
+
+
 let currentDay = 'Неділя';
-let isYes ;
+let isYes;
 
-for (isYes = true ; isYes == true ; isYes = confirm(`Поточний день ${currentDay}, хочете продовжити?`) ){
-        
-   
-      if(currentDay == 'Понеділок'){
-        currentDay = 'Вівторок';
-
-      } else if(currentDay == 'Вівторок'){
-        currentDay = 'Середа';
-      } else if (currentDay == 'Середа') {
-        currentDay = 'Четвер';
-      } else if (currentDay == 'Четвер') {
-        currentDay = "П'ятниця";
-      } else if (currentDay == "П'ятниця"){
-        currentDay = 'Субота';
-      } else if (currentDay == 'Субота') {
-        currentDay = 'Неділя';
-      } else if (currentDay == 'Неділя') {
-        currentDay = 'Понеділок';
-      };
+for (isYes = true; isYes === true; isYes = confirm(`Поточний день ${currentDay}, хочете продовжити?`))
+ {
+  if (currentDay == 'Понеділок') {
+    currentDay = 'Вівторок';
+  } else if (currentDay == 'Вівторок') {
+    currentDay = 'Середа';
+  } else if (currentDay == 'Середа') {
+    currentDay = 'Четвер';
+  } else if (currentDay == 'Четвер') {
+    currentDay = "П'ятниця";
+  } else if (currentDay == "П'ятниця") {
+    currentDay = 'Субота';
+  } else if (currentDay == 'Субота') {
+    currentDay = 'Неділя';
+  } else if (currentDay == 'Неділя') {
+    currentDay = 'Понеділок';
+  };
 
 };
+*/
 
 
+/*9. Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.
 
+for (let j = 2; j <= 9; j++) {
+  for (let y = 1; y <= 10; y++) {
+      console.log(j + '*' + y +'=' + (j*y))
+  }
 
-
+}
+*/
 
 
 // 10 Игра «Угадай число». 
 
 // Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: 
 // каждую итерацию цикла делите диапазон чисел пополам, 
-   
 
-   
-alert('Загадать число от 0 до 100');
 
-let minN  = 0;
-let maxN = 100;
-let numberOfValues = maxN; 
-console.log('if Yes - numberOfValues start: ' + numberOfValues);   
-let  a = 'Yes';
 
- while ( a == 'Yes' ) {
-    
-    a= prompt(`Ваше чило більше? ${numberOfValues} Yes/No/ItsMyNumber`)
-    numberOfValues = Math.floor((numberOfValues / 2));
-    minN =  maxN - numberOfValues + 1;
-    maxN =  maxN;
- 
-    console.log('if Yes - numberOfValues: ' + numberOfValues);     
-    console.log('if Yes - minN: ' + minN);
-    console.log('if Yes - maxN: ' + maxN);
-    console.log('if Yes - numberOfValues after: ' + numberOfValues);  
-  
-};
+// alert('Загадать число от 0 до 100');
 
-   
+// let minN = 0;
+// let maxN = 100;
+// let numberOfValues = maxN;
+// console.log('if Yes - numberOfValues start: ' + numberOfValues);
+// let a = 'Yes';
+
+// while (a == 'Yes') {
+
+//   a = prompt(`Ваше чило більше? ${numberOfValues} Yes/No/ItsMyNumber`)
+//   numberOfValues = Math.floor((numberOfValues / 2));
+//   minN = maxN - numberOfValues + 1;
+//   maxN = maxN;
+
+//   console.log('if Yes - numberOfValues: ' + numberOfValues);
+//   console.log('if Yes - minN: ' + minN);
+//   console.log('if Yes - maxN: ' + maxN);
+//   console.log('if Yes - numberOfValues after: ' + numberOfValues);
+
+// };
+
+
 
 
 
 //    цикл - 100 / 2 (n/2)
-   
+
 // // записываете результат в N и 
-   
+
 // // спрашиваете у пользователя 
 //     «Ваше число > N,
 //      < N или == N?». 
-   
-// // В зависимости от того, что указал пользователь, уменьшаете диапазон. 
-   
-// // Начальный диапазон от 0 до 100, поделили пополам и получили 50. 
-   
-// // Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. 
-   
-// // И так до тех пор, пока пользователь не выберет == N.
 
-     
+// // В зависимости от того, что указал пользователь, уменьшаете диапазон. 
+
+// // Начальный диапазон от 0 до 100, поделили пополам и получили 50. 
+
+// // Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. 
+
+// // И так до тех пор, пока пользователь не выберет == N.
