@@ -39,14 +39,14 @@ console.log(userAge);
 
 
 //Task #2
+// Task #2
 // Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
 
 //Get the number from 0-9
 //Create a let with messege $
 //Compare
 
-/*
-let userNumber = 8;
+let userNumber = -10;
 let mesForUser;
 switch (userNumber) {
     case 1:
@@ -79,8 +79,12 @@ switch (userNumber) {
     case 0:
         mesForUser = ')'
         break;
+    default : 
+        mesForUser = 'Not found'
+        break;
 }
 console.log(mesForUser)
+
 */
 
 
