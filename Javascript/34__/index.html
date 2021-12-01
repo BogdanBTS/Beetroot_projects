@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Створити HTML-сторінку з кнопкою "Відкрити"
+         і модальним вікном. На модальном вікні повинен бути текст і кнопка "Закрити". 
+         Спочатку модальне вікно не відображається. 
+         При кліку на кнопку "Відкрити" з'являється модальне вікно, 
+         на кнопку "Закрити" — зникає.-->
+
+    <h2>HTML-сторінка з кнопкою "Відкрити"
+        і модальним вікном.</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Відкрити</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <button class="close">Закрити &times;</button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit totam deleniti, numquam sit
+                explicabo dolorem provident repellat blanditiis ab, quasi inventore, culpa harum eius nulla sapiente
+                tempore nihil asperiores...</p>
+        </div>
+
+    </div>
+
+    <div class="m1">
+
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        const btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

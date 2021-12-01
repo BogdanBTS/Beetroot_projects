@@ -1,0 +1,14 @@
+{
+  "name": "montichello",
+  "version": "1.0.0",
+  "description": "first gulp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bogdan Tsaruk",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
