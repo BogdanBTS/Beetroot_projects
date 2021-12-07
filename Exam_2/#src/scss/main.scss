@@ -10,7 +10,7 @@ $line:#2C4058;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: $main;
-    background-color:$second;
+    background-color: $second;
 }
 
 a {
@@ -218,58 +218,63 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &:last-child {
-      margin-top: 196px;
-      .image {
-        order: 2;
-      }
+        margin-top: 196px;
+
+        .image {
+            order: 2;
+        }
     }
 }
+
 .image {
     width: 54%;
     z-index: 1;
 }
 
 .img-first {
-    transform: translate3d(-34%,-12%, 0);
+    transform: translate3d(-34%, -12%, 0);
     transition: 0.65s ease-in;
 }
 
-.section__content.first{
-position: relative;
-padding-top: 55px;
-&::after{
-content: '';
-background: #55B7FF;
-position: absolute;
-width: 585px;
-height: 470px;
-bottom: 57px;
-left: -215px;
-}
-}
-
-.img-second {
-    transform: translate3d(34%,-12%, 0);
-    transition: 0.65s ease-in;
-}
-
-.section__content.second{
+.section__content.first {
     position: relative;
-    &::after{
-    content: '';
-    background: #7E5AFF;
-    position: absolute;
-    width: 585px;
-    height: 470px;
-    bottom: 57px;
-    right: -215px;
+    padding-top: 55px;
+
+    &::after {
+        content: '';
+        background: #55B7FF;
+        position: absolute;
+        width: 585px;
+        height: 470px;
+        bottom: 57px;
+        left: -215px;
     }
 }
 
-.img-showing {
+.img-second {
+    transform: translate3d(34%, -12%, 0);
+    transition: 0.65s ease-in;
+}
+
+.section__content.second {
+    position: relative;
+
+    &::after {
+        content: '';
+        background: #7E5AFF;
+        position: absolute;
+        width: 585px;
+        height: 470px;
+        bottom: 57px;
+        right: -215px;
+    }
+}
+
+.img-active {
     transform: translate(0, 0);
-  }  
+}
 
 .text-description-block {
     width: 40.7%;
@@ -333,20 +338,220 @@ left: -215px;
 
 //-----LATEST NEWS-----!
 
-.section.latest-news{
+.section.latest-news {
     background: url('../img/latest_news_bg.jpg') center no-repeat;
-        background-size: cover;
+    background-size: cover;
+    padding: 99px 0 142px 0;
 }
 
-.section__header.modify{
+.section__header.modify {
     margin: 34px auto 95px;
     color: $second;
 }
 
-.section__title.modify::before{
+.section__title.modify::before {
     background-color: $second;
 }
 
+
+.container.latest-news__inner {
+    position: relative;
+    width: 75%
+}
+
+.articles {
+    //display: flex;
+    margin: 0 -15px;
+    position: relative;
+}
+
+.articles-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    // flex-basis: 40%;
+    height: 515px;
+    background: $second;
+    position: relative;
+
+    &__img {
+        width: 100%;
+        height: 46.6%;
+    }
+
+    &__block {
+        padding: 30px 16px 30px 20px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $main;
+        line-height: 26.82px;
+        margin-bottom: 15px;
+    }
+
+    &__paragraph {
+        font-family: "OpenSans", sans-serif;
+        font-size: 18px;
+        line-height: 24.51px;
+        color: $main;
+        letter-spacing: .5px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    &__photo {
+        border-radius: 50%;
+    }
+
+    &__author-name-block {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $main;
+    }
+
+    &__date {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #55b7ff;
+    }
+
+}
+
+.articles .slick-arrow {
+    position: absolute;
+    top: 40.5%;
+    transform: translateX(49%);
+    z-index: 4;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .articles .slick-arrow:focus {
+    outline: none;
+  }
+  /* Стрелка влево */
+  .articles .slick-arrow.slick-prev {
+    left: -8.5%;
+    background: url("../img/arrow_slick_left.svg") 0 0 no-repeat;
+    background-size: 25%;
+    background-position: center;
+  }
+  /* Стрелка вправо */
+  .articles .slick-arrow.slick-next {
+    right: -5.5%;
+    background: url("../img/arrow_slick_right.svg") 0 0 no-repeat;
+    background-size: 25%;
+    background-position: center;
+  }
+
+
+/* Точки (булиты) */
+.articles .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .articles .slick-dots li {
+    margin: 58px 20px 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $second;
+    border-radius: 50px;
+    cursor: pointer;
+    background: none;
+  }
+  /* Активная точка */
+  .articles .slick-dots li.slick-active {
+    background: $second;
+  }
+  /* Элемент точки */
+  .articles .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: none;
+  }
+  
+  .articles .slick-dots li button:focus {
+    outline: none;
+  }
+  
+
+
+//-----GALLERY-----!
+
+.section__gallery--modify {
+    padding: 140px 0 140px 0;
+}
+
+.gallery{
+
+}
+
+.button--gallery{
+    display: block;
+    font-size: 14px;
+    width: 190px;
+    height: 50px;
+    padding: 10px 50px 19px 48px;
+    line-height: 27px;
+    margin: 0 auto;
+}
+
+.gallery-grid{
+display: grid;
+gap: 10px;
+grid-template-columns: repeat(4, 1fr);
+
+&__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+  
+ &__item:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+}
 
 
 // span {
