@@ -44,36 +44,6 @@ $(() => {
 
     })
 
-    ////////////////////////////////////////////////////////////////////////////////////////
-    // $(document).scroll(() => {
-    //     if ($(window).scrollTop() < 800) {
-    //         $(".active").removeClass("active");
-    //         $("nav__link-about-us").addClass("active");
-    //     }
-    // });
-
-    // $(document).scroll(() => {
-    //     if ($(window).scrollTop() > 800 && $(window).scrollTop() < 2200) {
-    //         $(".active").removeClass("active");
-    //         $("nav__link-projects").addClass("active");
-    //     }
-    // });
-
-    // $(document).scroll(() => {
-    //     if ($(window).scrollTop() > 2200 && $(window).scrollTop() < 4400) {
-    //         $(".menu__link_checked").removeClass("menu__link_checked");
-    //         $(".menu__link-news").addClass("menu__link_checked");
-    //     }
-    // });
-
-    // $(document).scroll(() => {
-    //     if ($(window).scrollTop() > 4200) {
-    //         $(".menu__link_checked").removeClass("menu__link_checked");
-    //         $(".menu__link-contact").addClass("menu__link_checked");
-    //     }
-    // });
-
-
     // ---what we do animation---!
 
     $(document).scroll(() => {
