@@ -1,9 +1,17 @@
 $main:#2C4058;
 $second:#FFFFFF;
 $line:#2C4058;
+$element:#7e5aff;
+$text:#4B5562;
+$valid:#2ecc71;
+$notvalid:#e74c3c;
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .body {
@@ -26,6 +34,10 @@ a {
 }
 
 //-----INTRO-----!
+.continer--intro{
+    width: 75%;
+}
+
 .intro {
     position: relative;
     width: 100%;
@@ -48,27 +60,69 @@ a {
     }
 }
 
-.intro__slider {
+.about-slider-block{
+    //overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
 
-    .slider__item {
-        text-align: center;
+.about-slider-block .slick-dots {
+    position: absolute;
+    z-index: 1;
+    bottom: -35%;
+    right: -15%;
+    list-style-type: none;
+}
 
-        &-h1 {
-            font-size: 80px;
-            font-weight: bold;
-            color: $second;
-            letter-spacing: 0.1em;
-            padding-bottom: 29px;
-        }
+.about-slider-block .slick-dots li {
+    margin: 41px 15px 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $second;
+    border-radius: 50px;
+    cursor: pointer;
+    background: none;
+    z-index: 1;
+}
 
-        &-p {
-            font-size: 18px;
-            color: $second;
-            letter-spacing: 0.3em;
-        }
+/* Slick dot active */
+.about-slider-block .slick-dots .slick-active {
+    background:$second;
+}
+
+/* Slick button orginal */
+.about-slider-block .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: none;
+}
+
+.about-slider-block .slick-dots li button:focus {
+    outline: none;
+}
+
+
+.slider__item {
+    text-align: center;
+
+    &-h1 {
+        font-size: 80px;
+        font-weight: bold;
+        color: $second;
+        letter-spacing: 0.1em;
+        padding-bottom: 29px;
     }
 
+    &-p {
+        font-size: 18px;
+        color: $second;
+        letter-spacing: 0.3em;
+    }
 }
+
 
 .intro__scroll {
     width: 40px;
@@ -101,6 +155,19 @@ a {
     z-index: 1000;
 }
 
+.header.fixed {
+    padding: 10px 0;
+    background-color: #01a2ff;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.95;
+
+}
+
 .header__inner {
     display: flex;
     align-items: center;
@@ -109,7 +176,7 @@ a {
 }
 
 .header__logo {
-    //flex-basis: 25%;
+    scroll-behavior: smooth;
 }
 
 .logo {
@@ -263,7 +330,7 @@ a {
 
     &::after {
         content: '';
-        background: #7E5AFF;
+        background: $element;
         position: absolute;
         width: 585px;
         height: 470px;
@@ -300,7 +367,7 @@ a {
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         line-height: 30px;
-        color: #4b5562;
+        color: $text;
     }
 
     &__btn {
@@ -443,35 +510,43 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     cursor: pointer;
-  }
+    transition: .2s ease-in;
 
-  .articles .slick-arrow:focus {
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+}
+
+.articles .slick-arrow:focus {
     outline: none;
-  }
-  /* Стрелка влево */
-  .articles .slick-arrow.slick-prev {
+}
+
+/* Slick left arrow */
+.articles .slick-arrow.slick-prev {
     left: -8.5%;
     background: url("../img/arrow_slick_left.svg") 0 0 no-repeat;
     background-size: 25%;
     background-position: center;
-  }
-  /* Стрелка вправо */
-  .articles .slick-arrow.slick-next {
+}
+
+/* Slick right arrow */
+.articles .slick-arrow.slick-next {
     right: -5.5%;
     background: url("../img/arrow_slick_right.svg") 0 0 no-repeat;
     background-size: 25%;
     background-position: center;
-  }
+}
 
 
-/* Точки (булиты) */
+/* Slick dots area */
 .articles .slick-dots {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
-  }
-  .articles .slick-dots li {
+}
+
+.articles .slick-dots li {
     margin: 58px 20px 0;
     width: 10px;
     height: 10px;
@@ -479,22 +554,24 @@ a {
     border-radius: 50px;
     cursor: pointer;
     background: none;
-  }
-  /* Активная точка */
-  .articles .slick-dots li.slick-active {
+}
+
+/* Slick dots active */
+.articles .slick-dots li.slick-active {
     background: $second;
-  }
-  /* Элемент точки */
-  .articles .slick-dots li button {
+}
+
+/* Slick orgignal button */
+.articles .slick-dots li button {
     font-size: 0;
     border: none;
     background: none;
-  }
-  
-  .articles .slick-dots li button:focus {
+}
+
+.articles .slick-dots li button:focus {
     outline: none;
-  }
-  
+}
+
 
 
 //-----GALLERY-----!
@@ -503,11 +580,9 @@ a {
     padding: 140px 0 140px 0;
 }
 
-.gallery{
+.gallery {}
 
-}
-
-.button--gallery{
+.button--gallery {
     display: block;
     font-size: 14px;
     width: 190px;
@@ -517,42 +592,252 @@ a {
     margin: 0 auto;
 }
 
-.gallery-grid{
-display: grid;
-gap: 10px;
-grid-template-columns: repeat(4, 1fr);
+.gallery-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    grid-template-rows: repeat(2, 214px);
+    margin-bottom: 60px;
 
-&__item{
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #353535;
+        font-size: 3rem;
+        color: #fff;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        ;
+    }
+
+    &__item:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+        transform: translateY(-3px) scale(1.05);
+    }
+}
+
+.gallery-grid__item.one--wide {
+    background-image: url(../img/gallery_big.jpg);
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto;
+}
+
+.gallery-grid__item.two {
+    background-image: url(../img/gallery_image_2.jpg);
+}
+
+.gallery-grid__item.three {
+    background-image: url(../img/gallery_image_3.jpg);
+}
+
+.gallery-grid__item.four {
+    background-image: url(../img/gallery_image_4.jpg);
+}
+
+.gallery-grid__item.five {
+    background-image: url(../img/gallery_image_5.jpg);
+}
+
+/* Medium screens */
+@media screen and (min-width: 600px) {
+    .gallery-grid__item.one--wide {
+        grid-row: span 2 / auto;
+        grid-column: span 2 / auto;
+    }
+}
+
+
+//-----CONTACT-----!
+.form__wrapper {
+    max-width: 770px;
+    max-height: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form__wrapper-inner {
+    position: absolute;
+    bottom: -21.5%;
+    background: url(../img/contact_bg.jpg) center no-repeat;
+    background-size: cover;
+    padding: 60px 60px 68px 60px;
+    left: 26%;
+    max-width: 770px;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.3);
+}
+
+.section__header--contact {
+    min-width: 332px;
+    margin: 0 159px 47px 159px;
+}
+
+.contact {
+    display: flex;
+    max-height: 196px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.contact-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    &__item {
+        line-height: 28px;
+    }
+
+    &__icon {
+        letter-spacing: 5px;
+        font-size: 15px;
+        color: $element;
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 48%;
+}
+
+.small-error {
+    visibility: hidden;
+    font-size: 14px;
+}
+
+.form-control.success input {
+    border-color: $valid;
+}
+
+.form-control.error input {
+    border-color: $notvalid;
+}
+
+.form-control.error .small-error {
+    visibility: visible;
+    color: $notvalid;
+}
+
+
+.contact__name-input {
+    width: 100%;
+    padding: 3px 5% 16px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $line;
+    color: $text;
+    opacity: .5;
+    transition: all .2s ease-out;
+
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.contact__email-input {
+    width: 100%;
+    padding: 3px 5% 16px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $line;
+    color: $text;
+    opacity: .5;
+    transition: all .2s ease-out;
+
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.button--contact {
+    font-size: 18px;
+    width: 140px;
+    height: 50px;
+    padding: 10px 34px 12px 34px;
+    line-height: 27px;
+    background: transparent;
+    align-self: end;
+}
+
+.section.section__contact--modify {
+    padding: 0px 0 0px 0;
+    position: relative;
+}
+
+
+.map {
+    height: 698px;
+    width: 100%;
+}
+
+
+
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    font-size: 19px;
+    border: solid 1px white;
+    outline: none;
+    background-color: #55b8ff;
+    color: white;
+    cursor: pointer;
+    padding: 9px 11px 7px 11px;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+#topBtn:hover {
+    background-color: #01a2ff;
+}
+
+
+//-----FOOTER-----!
+
+.footer {
+    height: 549px;
+    background: url(../img/footer_bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.container--footer {
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background: #353535;
-    font-size: 3rem;
-    color: #fff;
-    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
- }
-  
- &__item:hover {
-    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-    transform: translateY(-3px) scale(1.1);
- }
 }
 
-#map {
-    height: 700px;
+.footer__inner {
+    max-width: 772px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 24%;
 }
 
+.footer__inner-text {
+    color: $second;
+    padding-top: 38px;
+    font-size: 14px;
+}
 
 // span {
 //     font-size: 20px;
@@ -567,9 +852,9 @@ grid-template-columns: repeat(4, 1fr);
 
 //     @media (max-width: 676px) {
 //         font-size: 50px;
+// }
 //     }
 // }
 
 // img {
 //     width: 780px;
-// }

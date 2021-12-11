@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://kit.fontawesome.com/78593abf91.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
 
-<body class="body">
+<body class="body" id="body">
     @@include('_header.html')
-    <div class="intro">
-        <div class="container">
-            <div class="intro__slider">
+    <div class="intro" id="intro">
+        <div class="container continer--intro">
+            <div class="about-slider-block">
                 <div class="slider__item">
                     <h1 class="slider__item-h1">
                         SIMPLE & MODERN
@@ -25,15 +25,46 @@
                         WE MAKE THE WORLD BEAUTIFUL EVERYDAY
                     </p>
                 </div>
-                <a class="intro__scroll" href="#">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
+                <div class="slider__item">
+                    <h1 class="slider__item-h1">
+                        SIMPLE & MODERN
+                    </h1>
+                    <p class="slider__item-p">
+                        WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+                    </p>
+                </div>
+                <div class="slider__item">
+                    <h1 class="slider__item-h1">
+                        SIMPLE & MODERN
+                    </h1>
+                    <p class="slider__item-p">
+                        WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+                    </p>
+                </div>
+                <div class="slider__item">
+                    <h1 class="slider__item-h1">
+                        SIMPLE & MODERN
+                    </h1>
+                    <p class="slider__item-p">
+                        WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+                    </p>
+                </div>
+                <div class="slider__item">
+                    <h1 class="slider__item-h1">
+                        SIMPLE & MODERN
+                    </h1>
+                    <p class="slider__item-p">
+                        WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+                    </p>
+                </div>
             </div>
-
+            <a class="intro__scroll" href="#">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </div>
     <main class="main">
-        <section class="section">
+        <section class="section" id="projects">
             <div class="container">
                 <header class="section__header">
                     <h2 class="section__title">
@@ -71,91 +102,91 @@
                 </div>
             </div>
         </section>
-        <section class="section latest-news">
+        <section class="section latest-news" id="news">
             <div class="container latest-news__inner">
-               
-                    <header class="section__header modify">
-                        <h2 class="section__title modify">
-                            LATEST NEWS
-                        </h2>
-                    </header>
-                    <div class="articles">
-                        <div class="articles-item">
-                            <img src="img/article_1.jpg" alt="Beauty of the Great building" class="articles-item__img">
-                            <div class="articles-item__block">
-                                <h4 class="articles-item__title">See The Unmatched Beauty Of The Great. </h4>
-                                <p class="articles-item__paragraph">Free directories: directories are perfect for
-                                    customers that are searching for...</p>
-                                <div class="articles-item__author">
-                                    <img src="img/article_1_a.jpg" alt="Isaac Dunn icon" class="articles-item__photo">
-                                    <div class="articles-item__author-name-block">
-                                        <span class="articles-item__name">Alja Brun</span>
-                                        <span class="articles-item__date">20 Jan 2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles-item">
-                            <img src="img/article_2.jpg" alt="Effective Advertising" class="articles-item__img">
-                            <div class="articles-item__block">
-                                <h4 class="articles-item__title">Effective Advertising Pointers.</h4>
-                                <p class="articles-item__paragraph">Having a home based business is a wonderful asset to
-                                    your life...</p>
-                                <div class="articles-item__author">
-                                    <img src="img/article_2_a.jpg" alt="Dominic Freeman" class="articles-item__photo">
-                                    <div class="articles-item__author-name-block">
-                                        <span class="articles-item__name">Dominic Freeman</span>
-                                        <span class="articles-item__date">13 Dec 2019</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles-item">
-                            <img src="img/article_3.jpg" alt="Hypotize Yourself" class="articles-item__img">
-                            <div class="articles-item__block">
-                                <h4 class="articles-item__title">Hypnotize Yourself Into The Ghost.</h4>
-                                <p class="articles-item__paragraph">There are many things that are important to catalog
-                                    design....</p>
-                                <div class="articles-item__author">
-                                    <img src="img/article_3_a.jpg" alt="Alice Ward" class="articles-item__photo">
-                                    <div class="articles-item__author-name-block">
-                                        <span class="articles-item__name">Alice Ward</span>
-                                        <span class="articles-item__date">30 Nov 2019</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles-item">
-                            <img src="img/article_1.jpg" alt="Beauty of the Great building" class="articles-item__img">
-                            <div class="articles-item__block">
-                                <h4 class="articles-item__title">See The Unmatched Beauty Of The Great. </h4>
-                                <p class="articles-item__paragraph">Free directories: directories are perfect for
-                                    customers that are searching for...</p>
-                                <div class="articles-item__author">
-                                    <img src="img/article_1_a.jpg" alt="Isaac Dunn icon" class="articles-item__photo">
-                                    <div class="articles-item__author-name-block">
-                                        <span class="articles-item__name">Alja Brun</span>
-                                        <span class="articles-item__date">20 Jan 2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles-item">
-                            <img src="img/article_2.jpg" alt="Effective Advertising" class="articles-item__img">
-                            <div class="articles-item__block">
-                                <h4 class="articles-item__title">Effective Advertising Pointers.</h4>
-                                <p class="articles-item__paragraph">Having a home based business is a wonderful asset to
-                                    your life...</p>
-                                <div class="articles-item__author">
-                                    <img src="img/article_2_a.jpg" alt="Dominic Freeman" class="articles-item__photo">
-                                    <div class="articles-item__author-name-block">
-                                        <span class="articles-item__name">Dominic Freeman</span>
-                                        <span class="articles-item__date">13 Dec 2019</span>
-                                    </div>
+
+                <header class="section__header modify">
+                    <h2 class="section__title modify">
+                        LATEST NEWS
+                    </h2>
+                </header>
+                <div class="articles">
+                    <div class="articles-item">
+                        <img src="img/article_1.jpg" alt="Beauty of the Great building" class="articles-item__img">
+                        <div class="articles-item__block">
+                            <h4 class="articles-item__title">See The Unmatched Beauty Of The Great. </h4>
+                            <p class="articles-item__paragraph">Free directories: directories are perfect for
+                                customers that are searching for...</p>
+                            <div class="articles-item__author">
+                                <img src="img/article_1_a.jpg" alt="Isaac Dunn icon" class="articles-item__photo">
+                                <div class="articles-item__author-name-block">
+                                    <span class="articles-item__name">Alja Brun</span>
+                                    <span class="articles-item__date">20 Jan 2020</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="articles-item">
+                        <img src="img/article_2.jpg" alt="Effective Advertising" class="articles-item__img">
+                        <div class="articles-item__block">
+                            <h4 class="articles-item__title">Effective Advertising Pointers.</h4>
+                            <p class="articles-item__paragraph">Having a home based business is a wonderful asset to
+                                your life...</p>
+                            <div class="articles-item__author">
+                                <img src="img/article_2_a.jpg" alt="Dominic Freeman" class="articles-item__photo">
+                                <div class="articles-item__author-name-block">
+                                    <span class="articles-item__name">Dominic Freeman</span>
+                                    <span class="articles-item__date">13 Dec 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles-item">
+                        <img src="img/article_3.jpg" alt="Hypotize Yourself" class="articles-item__img">
+                        <div class="articles-item__block">
+                            <h4 class="articles-item__title">Hypnotize Yourself Into The Ghost.</h4>
+                            <p class="articles-item__paragraph">There are many things that are important to catalog
+                                design....</p>
+                            <div class="articles-item__author">
+                                <img src="img/article_3_a.jpg" alt="Alice Ward" class="articles-item__photo">
+                                <div class="articles-item__author-name-block">
+                                    <span class="articles-item__name">Alice Ward</span>
+                                    <span class="articles-item__date">30 Nov 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles-item">
+                        <img src="img/article_1.jpg" alt="Beauty of the Great building" class="articles-item__img">
+                        <div class="articles-item__block">
+                            <h4 class="articles-item__title">See The Unmatched Beauty Of The Great. </h4>
+                            <p class="articles-item__paragraph">Free directories: directories are perfect for
+                                customers that are searching for...</p>
+                            <div class="articles-item__author">
+                                <img src="img/article_1_a.jpg" alt="Isaac Dunn icon" class="articles-item__photo">
+                                <div class="articles-item__author-name-block">
+                                    <span class="articles-item__name">Alja Brun</span>
+                                    <span class="articles-item__date">20 Jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles-item">
+                        <img src="img/article_2.jpg" alt="Effective Advertising" class="articles-item__img">
+                        <div class="articles-item__block">
+                            <h4 class="articles-item__title">Effective Advertising Pointers.</h4>
+                            <p class="articles-item__paragraph">Having a home based business is a wonderful asset to
+                                your life...</p>
+                            <div class="articles-item__author">
+                                <img src="img/article_2_a.jpg" alt="Dominic Freeman" class="articles-item__photo">
+                                <div class="articles-item__author-name-block">
+                                    <span class="articles-item__name">Dominic Freeman</span>
+                                    <span class="articles-item__date">13 Dec 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section section__gallery--modify">
@@ -166,34 +197,84 @@
                     </h2>
                 </header>
                 <div class="gallery-grid">
-<div class="gallery-grid__item">1</div>
-<div class="gallery-grid__item">2</div>
-<div class="gallery-grid__item">3</div>
-<div class="gallery-grid__item">4</div>
-<div class="gallery-grid__item">5</div>
+                    <div class="gallery-grid__item one--wide">
+                        <img src="img/gallery_360.png" alt="360 sign">
+                    </div>
+                    <div class="gallery-grid__item two"></div>
+                    <div class="gallery-grid__item three"></div>
+                    <div class="gallery-grid__item four"></div>
+                    <div class="gallery-grid__item five"></div>
 
                 </div>
                 <a href="#" class="button button--gallery">See more</a>
             </div>
         </section>
-        <section class="section">
-            <div id="map"></div>
+
+
+        <section class="section section__contact--modify" id="contact">
+            <div class="map" id="map"></div>
+
+            <div class="form__wrapper-inner">
+                <header class="section__header section__header--contact">
+                    <h2 class="section__title">
+                        get in touch
+                    </h2>
+                </header>
+
+
+                <div class="contact">
+                    <ul class="contact-info">
+                        <li class="contact-info__item"><i class="fas fa-map-marker-alt contact-info__icon"></i> 91
+                            Nolan
+                            Extensions Suite 670</li>
+                        <li class="contact-info__item"><i class="fas fa-phone-alt contact-info__icon"></i>+001
+                            356-868-2454</li>
+                        <li class="contact-info__item"><i
+                                class="fas fa-inbox contact-info__icon"></i>montichello@service.com
+                        </li>
+                        <li class="contact-info__item"><i class="far fa-clock contact-info__icon"></i>From 07:05AM
+                            to
+                            19:30PM</li>
+                    </ul>
+
+
+                    <form class="contact__form" id="form" action="/" method="post">
+                        <div class="form-control">
+                            <input class="contact__name-input" id="username" type="text" name="name"
+                                placeholder="Your Name" maxlength="20">
+                            <small class="small-error">Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <input class="contact__email-input" id="email" type="email" name="email"
+                                placeholder="Email">
+                            <small class="small-error">Error message</small>
+                        </div>
+                        <button type="submit" class="button button--contact" id="validate">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+
         </section>
-
-
-
     </main>
+    @@include('_footer.html')
 
 
+
+
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap">
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js" crossorigin="anonymous"></script>
     <script src="js/script.min.js">
     </script>
 </body>
 <!-- 
-https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&center=40.67698458077595,-73.88007099942716&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 -->
+    https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&center=40.67698458077595,-73.88007099942716&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 -->
 
 
 
