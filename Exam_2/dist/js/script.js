@@ -115,6 +115,16 @@ $(() => {
             },
         ],*/
     });
+
+    // Address Links
+    $('address').each(function() {
+        var text = $(this).text();
+    
+        var q    = $.trim(text).replace(/\r?\n/, ',').replace(/\s+/g, ' ');
+        var link = '<a class="address" href="http://maps.google.com/maps?q=' + encodeURIComponent(q) + '" target="_blank"></a>';
+    
+        return $(this).wrapInner(link);
+    });
 });
 
 //---TOP ARROW---!
@@ -139,6 +149,9 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
 
 
 

@@ -500,6 +500,10 @@ a {
   color: #FFFFFF;
 }
 
+.address {
+  color: #2c4058;
+}
+
 .container {
   max-width: 1190px;
   width: 100%;
