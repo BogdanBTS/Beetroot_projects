@@ -28,6 +28,7 @@ body {
 
     background-color: $body-bg;
     color: $txt-color;
+    text-shadow: 0 0 3px black;
 
     @include mobile {
         margin-bottom: 48px;
@@ -37,6 +38,7 @@ body {
 a {
     text-decoration: none;
     color: unset;
+    text-shadow: 0 0 1px black;
 }
 
 @media (hover: hover) {

@@ -40,10 +40,10 @@ export const ModalContent = props => {
                 <i className="bx bx-x"></i>
             </div>
         </div>
-    );
+    )
 }
 
-ModalContent.PropTypes = {
+ModalContent.propTypes = {
     onClose: PropTypes.func
 }
 
