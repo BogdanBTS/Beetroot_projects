@@ -23,8 +23,8 @@ const HeroSlide = () => {
             const params = {page: 1}
             try {
                 const response = await tmdbApi.getMoviesList(movieType.popular, {params});
-                setMovieItems(response.results.slice(1, 4));
-                console.log(response);
+                setMovieItems(response.results.slice(0, 4));
+                //console.log(response);
             } catch {
                 console.log('error');
             }
@@ -39,7 +39,7 @@ const HeroSlide = () => {
                 grabCursor={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                //autoplay={{delay: 3000}}
+                autoplay={{delay: 4000}}
             >
                 {
                     movieItems.map((item, i) => (
@@ -91,7 +91,7 @@ const HeroSlideItem = props => {
                     <div className="overview">{item.overview}</div>
                     <div className="btns">
                         <Button onClick={() => history.push('/movie/' + item.id)}>
-                            Watch now
+                            More info {/* Watch now */}
                         </Button>
                         <OutlineButton onClick={setModalActive}>
                             Watch trailer

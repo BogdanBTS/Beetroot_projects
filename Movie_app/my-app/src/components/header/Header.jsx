@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 
 import './header.scss';
 
-import logo from '../../assets/tmovie.png';
+import logo from '../../assets/bmovie.png';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const headerNav = [
         path: '/movie'
     },
     {
-        display: 'Tv Series',
+        display: 'TV Series',
         path: '/tv'
     }
 ];

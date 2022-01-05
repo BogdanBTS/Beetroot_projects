@@ -9,6 +9,7 @@
     img {
         margin-right: 10px;
         width: 50px;
+        margin-bottom: 10px;
 
         @include mobile {
             width: 30px;
@@ -28,7 +29,7 @@
 
     &.shrink {
         height: $header-shrink-height;
-        background-color: $body-bg;
+        background-color: rgba($body-bg, 0.8);
     }
 
     &__wrap {
@@ -63,7 +64,7 @@
                 width: 0;
                 transition: width 0.5s ease;
                 height: 2px;
-                background-color: $main-color;
+                background-color: $partner-color;
             }
             &.active::after, 
             &:hover::after {
@@ -73,11 +74,11 @@
 
         @include mobile {
             position: fixed;
-            bottom: 0;
+            bottom: -3px;
             left: 0;
             height: 80px;
             width: 100%;
-            background-color: $body-bg;
+            background-color: rgba($body-bg, 0.8);
             padding: 0 32px;
             box-shadow: $box-shadow;
 
