@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Detail from '../pages/detail/Detail';
+//import DetailActor from "../pages/detail/DetailActor";
  
 const Routes = () => {
     return (
@@ -13,10 +14,11 @@ const Routes = () => {
                 path='/:category/search/:keyword'
                 component={Catalog}
             />
-            <Route
+             <Route
                 path='/:category/:id'
                 component={Detail}
             />
+            
             <Route
                 path='/:category'
                 component={Catalog}

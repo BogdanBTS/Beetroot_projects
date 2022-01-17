@@ -3,7 +3,7 @@ import axiosClient from "./axiosClient";
 export const category = {
     movie: 'movie',
     tv: 'tv',
-    multi: 'multi'
+    person: 'person'
 }
 
 export const movieType = {
@@ -18,6 +18,12 @@ export const tvType = {
     on_theair: 'on_the_air'
 }
 
+export const personType = {
+    popular: 'popular',
+    name: 'name',
+    id: 'id'
+}
+
 const tmdbApi = {
     getMoviesList: (type, params) => {
         const url = 'movie/' + movieType[type];
@@ -27,27 +33,48 @@ const tmdbApi = {
         const url = 'tv/' + tvType[type];
         return axiosClient.get(url, params);
     },
+
+    getPersonList: (type, params) => {
+        const url = 'person/' + personType[type];
+        return axiosClient.get(url, params);
+    },
+
     getVideos: (cate, id) => {
-        const url =category[cate] + '/' + id + '/videos';
-        return axiosClient.get(url, {params:{}});
+        const url = category[cate] + '/' + id + '/videos';
+        return axiosClient.get(url, {
+            params: {}
+        });
     },
     search: (cate, params) => {
-        const url ='search/' + category[cate];
+        const url = 'search/' + category[cate];
         return axiosClient.get(url, params);
     },
     detail: (cate, id, params) => {
         const url = category[cate] + '/' + id;
         return axiosClient.get(url, params);
     },
+    detailActor: (cate, id, params) => {
+        const url = category[cate] + '/' + id;
+        return axiosClient.get(url, params);
+    },
     credits: (cate, id) => {
         const url = category[cate] + '/' + id + '/credits';
-        return axiosClient.get(url, {params:{}});
+        return axiosClient.get(url, {
+            params: {}
+        });
+    },
+    movieCredits: (cate, id) => {
+        const url = category[cate] + '/' + id + '/movie_credits';
+        return axiosClient.get(url, {
+            params: {}
+        });
     },
     similar: (cate, id) => {
         const url = category[cate] + '/' + id + '/similar';
-        return axiosClient.get(url, {params:{}});
+        return axiosClient.get(url, {
+            params: {}
+        });
     },
 }
 
 export default tmdbApi;
-

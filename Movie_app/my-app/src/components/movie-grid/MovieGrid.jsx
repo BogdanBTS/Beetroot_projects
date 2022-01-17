@@ -6,7 +6,7 @@ import { useHistory, useParams } from 'react-router';
 import Button, { OutlineButton } from '../button/Button';
 import Input from '../input/Input';
 
-import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
+import tmdbApi, { category, movieType, tvType, personType } from '../../api/tmdbApi';
 
 const MovieGrid = props => {
 
@@ -24,6 +24,9 @@ const MovieGrid = props => {
                 switch (props.category) {
                     case category.movie:
                         response = await tmdbApi.getMoviesList(movieType.upcoming, { params });
+                        break;
+                    case category.person:
+                        response = await tmdbApi.getPersonList(personType.popular, { params });
                         break;
                     default:
                         response = await tmdbApi.getTvList(tvType.popular, { params });
@@ -51,6 +54,9 @@ const MovieGrid = props => {
                 switch (props.category) {
                     case category.movie:
                         response = await tmdbApi.getMoviesList(movieType.upcoming, { params });
+                        break;
+                    case category.person:
+                        response = await tmdbApi.getPersonList(personType.popular, { params });
                         break;
                     default:
                         response = await tmdbApi.getTvList(tvType.popular, { params });
@@ -110,6 +116,7 @@ const MovieSearch = props => {
                 goToSearch();
             }
         }
+        
         document.addEventListener('keyup', enterEvent);
         return () => {
             document.removeEventListener('keyup', enterEvent);

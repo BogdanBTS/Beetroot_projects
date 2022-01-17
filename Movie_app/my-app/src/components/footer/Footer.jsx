@@ -22,16 +22,13 @@ const Footer = () => {
                        <Link to='/'>Term of services</Link>
                        <Link to='/'>About</Link>
                    </div>
+                   
                    <div className="footer__content-item">
-                       <Link to='/'>Live</Link>
-                       <Link to='/'>FAQ</Link>
-                       <Link to='/'>Premium</Link>
-                       <Link to='/'>Privacy policy</Link>
-                   </div>
-                   <div className="footer__content-item">
-                       <Link to='/'>You must watch</Link>
-                       <Link to='/'>Recent release</Link>
-                       <Link to='/'>TOP IMDB</Link>
+                       <a href='https://megogo.net'>MEGOGO</a>
+                       <a href='https://www.netflix.com/'>NETFLIX</a>
+                       <a href='https://tv.apple.com/'>Apple TV</a>
+                       <a href='https://www.imdb.com/chart/top/'>TOP IMDB</a>
+
                    </div>
                </div>
            </div>

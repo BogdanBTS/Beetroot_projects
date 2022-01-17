@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 import { category } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
+import noImage from '../../assets/no-image.jpg';
+
 
 const MovieCard = props => {
 
@@ -13,11 +15,11 @@ const MovieCard = props => {
 
     const link = '/' + category[props.category] + '/' + item.id;
 
-    const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
+    const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path || item.profile_path);
 
-    return (
+    return (    
         <Link to={link}>
-            <div className='movie-card' style={{backgroundImage: `url(${bg})`}}>
+            <div className='movie-card' style={item.profile_path || item.poster_path ? {backgroundImage: `url(${bg})`} : {backgroundImage: `url(${noImage})`} }>
                 <Button>
                     <i className='bx bx-play'></i>
                 </Button>

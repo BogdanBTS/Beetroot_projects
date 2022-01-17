@@ -27,6 +27,9 @@ const MovieList = props => {
                     case category.movie:
                         response = await tmdbApi.getMoviesList(props.type, {params});
                         break;
+                    case category.person:
+                        response = await tmdbApi.getPersonList(props.type, {params});
+                        break;
                     default:
                         response = await tmdbApi.getTvList(props.type, {params});
                         break;
@@ -37,7 +40,7 @@ const MovieList = props => {
             setItems(response.results);
         }
         getList();
-    }, []);
+    }, [props.category, props.id]);
     return (
         <div className='movie-list'>
             <Swiper

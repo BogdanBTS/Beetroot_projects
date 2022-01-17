@@ -1,7 +1,7 @@
 @use '../../scss/' as *;
 
 .banner {
-    height: 60vh;
+    height: 55vh;
     position: relative;
     background-position: top;
     background-size: cover;
@@ -93,13 +93,14 @@
 
 .casts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
     gap: 10px;
 
     &__item {
         &__img {
             padding-top: 160px;
             background-size: cover;
+            background-position: center;
             margin-bottom: 8px;
             border-radius: $border-radius;
         }
@@ -112,6 +113,7 @@
 
 .video {
     margin-bottom: 48px;
+    text-align: center;
 
     &__title {
         margin-bottom: 24px;
@@ -119,9 +121,17 @@
 }
 
 .extra-info {
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
     text-shadow: 0 0 2px black;
     display: flex;
     flex-direction: column-reverse;
 }
+
+// .extra-info-actor{
+//     font-weight: 600;
+//     font-style: italic;
+//     text-shadow: 0 0 2px black;
+//     display: flex;
+//     flex-direction: column-reverse;
+// }

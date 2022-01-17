@@ -10,8 +10,8 @@ const Catalog = () => {
     return (
         <>
            <PageHeader>
-               {category === catry.movie ? 'Movies' : 'TV Series'}
-           </PageHeader>
+               {category === catry.movie ? 'Movies' : '' || category === catry.tv ? 'TV Series' : '' || category === catry.person ? 'Actors' : ''}
+           </PageHeader>    
            <div className="container">
                <div className="section mb-3">
                    <MovieGrid category={category}/>
