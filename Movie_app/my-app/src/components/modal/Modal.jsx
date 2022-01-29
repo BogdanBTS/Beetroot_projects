@@ -5,14 +5,14 @@ import './modal.scss';
 
 const Modal = props => {
     
-    const [active, setActive] = useState(false);
+    //const [active, setActive] = useState(false);
 
-    useEffect(() => {
-        setActive(props.active);
-    }, [props.active]);
+    // useEffect(() => {
+    //     setActive(props.active);
+    // }, [props.active]);
     
     return (
-        <div id={props.id} className={`modal ${active ? 'active' : ''}`}>
+        <div id={props.id} className={`modal ${props.active ? 'active' : ''}`}>
             {props.children}
             
         </div>

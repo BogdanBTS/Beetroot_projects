@@ -14,6 +14,7 @@ const VideoList = props => {
         }
         getVideos();
     }, [category, props.id]);
+    
     return (
         <>
         {

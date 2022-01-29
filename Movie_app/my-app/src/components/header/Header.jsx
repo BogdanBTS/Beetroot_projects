@@ -40,7 +40,9 @@ const Header = () => {
                 headerRef.current.classList.remove('shrink');
             }
         }
-            window.addEventListener('scroll', shrinkHeader);
+        
+        window.addEventListener('scroll', shrinkHeader);
+
         return () => {
             window.removeEventListener('scroll', shrinkHeader);
         };
