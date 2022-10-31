@@ -63,10 +63,10 @@ const Detail = () => {
 
                                 <p className='extra-info'> 
                                     {item.release_date ? 
-                                    <span>{`Release date: ${item.release_date.split("-").reverse().join("-")}. Avarage rating: ${item.vote_average} / 10`}</span> : ''}
+                                    <span>{`Release date: ${item.release_date.split("-").reverse().join("-")}. Avarage rating: ${item.vote_average.toFixed(1)} / 10`}</span> : ''}
 
                                     {item.first_air_date ? 
-                                    <span>{`Release date: ${item.first_air_date.split("-").reverse().join("-")}. Avarage rating: ${item.vote_average} / 10`}</span> : ''}
+                                    <span>{`Release date: ${item.first_air_date.split("-").reverse().join("-")}. Avarage rating: ${item.vote_average.toFixed(1)} / 10`}</span> : ''}
 
                                    
                                     {item.birthday || item.place_of_birth ?

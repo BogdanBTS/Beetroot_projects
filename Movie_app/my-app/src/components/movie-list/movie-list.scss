@@ -5,7 +5,7 @@
 
 .swiper-slide {
        width: 15%;
-       
+       padding-top: 7px;
        @include tablet {
            width: 30%;
        }
