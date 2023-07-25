@@ -1,11 +1,16 @@
 @use '../../scss/' as *;
 
 .banner {
-    height: 55vh;
+    height: 77vh;
     position: relative;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    
+    @include mobile {
+        height: 55vh;
+    }
+    
 
     &::before {
         content: '';
@@ -36,6 +41,7 @@
     margin-top: -200px;
     position: relative;
     padding: 0 2rem;
+   
 
     &__poster {
         flex: 1;
@@ -74,12 +80,15 @@
         }
 
         .genres {
-            & > * ~ * {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 0.5rem;
+            & > * {
                 margin-left: 0.5rem;
             }
         
             &__item {
-                padding: .5rem 1.5rem;
+                padding: .4rem 1rem;
                 border: 1.5px solid $white;
                 border-radius: $border-radius;
                 font-size: 0.8rem;
@@ -134,4 +143,5 @@
 //     text-shadow: 0 0 2px black;
 //     display: flex;
 //     flex-direction: column-reverse;
-// }
+// } 
+// selector > * ~ *;

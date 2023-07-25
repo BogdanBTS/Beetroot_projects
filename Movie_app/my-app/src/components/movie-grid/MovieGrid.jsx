@@ -41,7 +41,7 @@ const MovieGrid = props => {
             setItems(response.results);
             
             SetTotalPage(response.total_pages);
-            console.log(response.total_pages);
+            //console.log(response.total_pages);
         }
         getList();
     }, [props.category, keyword]);
@@ -53,7 +53,7 @@ const MovieGrid = props => {
                 const params = {
                     page: page + 1
                 };
-                console.log(params);
+                //console.log(params);
                 switch (props.category) {
                     case category.movie:
                         response = await tmdbApi.getMoviesList(movieType.upcoming, { params });
@@ -99,9 +99,9 @@ const MovieGrid = props => {
 }
 
 const MovieSearch = props => {
-    console.log(props);
+    //console.log(props);
     const history = useHistory();
-    console.log(useHistory());
+    //console.log(useHistory());
     const [keyword, setKeyword] = useState(props.keyword ? props.keyword : '');
 
     const goToSearch = useCallback(
