@@ -1,0 +1,123 @@
+.banner {
+  height: 77vh;
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 600px) {
+  .banner {
+    height: 55vh;
+  }
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
+}
+
+.movie-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -200px;
+  position: relative;
+  padding: 0 2rem;
+}
+.movie-content__poster {
+  flex: 1;
+}
+@media only screen and (max-width: 600px) {
+  .movie-content__poster {
+    display: none;
+  }
+}
+.movie-content__poster__img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding-top: 165%;
+}
+.movie-content__info {
+  width: 70%;
+  padding-left: 32px;
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  .movie-content__info {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+.movie-content__info > * {
+  margin-bottom: 15px;
+}
+.movie-content__info .title {
+  font-size: 4rem;
+  line-height: 1;
+}
+.movie-content__info .genres {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+.movie-content__info .genres > * {
+  margin-left: 0.5rem;
+}
+.movie-content__info .genres__item {
+  padding: 0.4rem 1rem;
+  border: 1.5px solid #fff;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #0f0f0f;
+}
+
+.casts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  gap: 10px;
+}
+.casts__item__img {
+  padding-top: 160px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+.casts__item__name {
+  font-size: 0.9rem;
+}
+
+.video {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.video__title {
+  margin-bottom: 24px;
+}
+
+.extra-info {
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 0 2px black;
+  display: flex;
+  flex-direction: column-reverse;
+}/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,14 @@
+.swiper-slide {
+  width: 15%;
+  padding-top: 7px;
+}
+@media only screen and (max-width: 1024px) {
+  .swiper-slide {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .swiper-slide {
+    width: 40%;
+  }
+}/*# sourceMappingURL=movie-list.css.map */
