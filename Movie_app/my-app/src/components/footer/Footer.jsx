@@ -11,7 +11,7 @@ const Footer = () => {
            <div className="footer__content container">
                <div className="footer__content-logo">
                     <div className="logo">
-                        <img src={logo} alt="bmovie logo" />
+                        <img src={logo} alt="bMovies logo" />
                         <Link to='/'>bMovies</Link>
                     </div>
                </div>
@@ -24,10 +24,10 @@ const Footer = () => {
                    </div>
                    
                    <div className="footer__content-item">
-                       <a href='https://megogo.net'>MEGOGO</a>
-                       <a href='https://www.netflix.com/'>NETFLIX</a>
-                       <a href='https://tv.apple.com/'>Apple TV</a>
-                       <a href='https://www.imdb.com/chart/top/'>TOP IMDB</a>
+                       <a href='https://megogo.net' target="_blank" rel="noopener noreferrer">MEGOGO</a>
+                       <a href='https://www.netflix.com/' target="_blank" rel="noopener noreferrer">NETFLIX</a>
+                       <a href='https://tv.apple.com/' target="_blank" rel="noopener noreferrer">Apple TV</a>
+                       <a href='https://www.imdb.com/chart/top/' target="_blank" rel="noopener noreferrer">TOP IMDB</a>
 
                    </div>
                </div>
