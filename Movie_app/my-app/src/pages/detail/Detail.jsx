@@ -29,7 +29,9 @@ const Detail = () => {
 
         }
         getDetail();
-    }, [category, id]);
+    }, [category, id,]);
+
+    
 
     // useEffect(() => {
     //     const getDetail = async () => {
