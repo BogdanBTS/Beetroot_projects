@@ -23,6 +23,7 @@
 
             @include mobile {
                 grid-template-columns: repeat(2, 1fr);
+                padding-left: 22px;
             }
         }
 
