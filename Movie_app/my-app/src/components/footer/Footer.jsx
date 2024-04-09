@@ -28,9 +28,13 @@ const Footer = () => {
                        <a href='https://www.netflix.com/' target="_blank" rel="noopener noreferrer">NETFLIX</a>
                        <a href='https://tv.apple.com/' target="_blank" rel="noopener noreferrer">Apple TV</a>
                        <a href='https://www.imdb.com/chart/top/' target="_blank" rel="noopener noreferrer">TOP IMDB</a>
-
                    </div>
-               </div>
+
+                    
+                </div>
+                <div className='footer__content-rights'>
+                    <a href='https://bogdan-tsaruk.netlify.app/' target="_blank" rel="noopener noreferrer">© 2024 by Bogdan Tsaruk. All rights reserved.</a>
+                </div>
            </div>
         </div>
     );

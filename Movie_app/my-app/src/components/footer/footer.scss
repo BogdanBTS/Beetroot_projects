@@ -19,11 +19,18 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-items: center;
+            margin-bottom: 48px;
 
             @include mobile {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        &-rights {
+            display: flex;
+            justify-content: center;
+        }
+
         &-item {
             @include flex(flex-start, flex-start);
             flex-direction: column;
