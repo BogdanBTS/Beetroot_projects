@@ -81,6 +81,7 @@
             background-color: rgba($body-bg, 0.8);
             padding: 0 32px;
             box-shadow: $box-shadow;
+            z-index: 99;
 
             @include flex (center, space-between);
 
