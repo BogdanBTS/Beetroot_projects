@@ -1,3 +1,7 @@
+# bMovies - application for finding information about movies, tv-series and actors.
+
+This project is deployed to Netlify [https://bmovies-info.netlify.app] (https://bmovies-info.netlify.app/) to view it in your browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
